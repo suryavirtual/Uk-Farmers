@@ -1,0 +1,28 @@
+.icon-48-projects {
+      background-image: url(../images/l_projects.png);
+      padding-left:60px!important;
+}
+
+.icon-48-project {
+      background-image: url(../images/l_projects.png);
+      padding-left:60px!important;
+}
+
+.icon-48-skills {
+      background-image: url(../images/l_skills.png);
+      padding-left:60px!important;
+}
+
+.icon-48-skill {
+      background-image: url(../images/l_skills.png);
+      padding-left:60px!important;
+}
+
+
+
+#projectList th, #projectList td {vertical-align: middle;}
+
+
+
+
+/* skills below project title */

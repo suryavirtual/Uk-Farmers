@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+<config>
+	
+	
+	<fieldset name="general" label="COM_MB2PORTFOLIO_COMPONENT" description="">
+	
+			
+		<field name="portfolio_page" type="hidden" default="" label="COM_MB2PORTFOLIO_FORM_LBL_PORTFOLIO_PAGE" description="">
+			<option value="">JNONE</option>			
+		</field>
+			
+		
+	
+		 <field name="filter" type="list" class="inputbox" default="none" label="COM_MB2PORTFOLIO_FILTER" description="">
+				<option value="none">JNONE</option>		
+				<option value="normal">COM_MB2PORTFOLIO_PORTFOLIO_NORMAL</option>
+				<option value="fade">COM_MB2PORTFOLIO_PORTFOLIO_FADE</option>
+				<option value="isotope">COM_MB2PORTFOLIO_PORTFOLIO_ISOTOPE</option>							 
+		</field>
+		
+		
+		<field type="spacer" />
+		
+		
+		<field name="projects_limit" type="text" label="COM_MB2PORTFOLIO_FORM_LBLCOM_MB2PORTFOLIO_COUNT" description="" default="12" maxlength="255" />			
+		<field name="pagination" type="radio" class="btn-group" default="1" label="COM_MB2PORTFOLIO_PAGINATION_DESC" description="">                 
+   			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+        </field>
+		 
+			
+			
+			
+			
+				 
+					
+		<field name="projects_order" type="list" default="DESC" label="COM_MB2PORTFOLIO_ORDER" description="">                 
+   			<option value="ASC">COM_MB2PORTFOLIO_ASC</option>
+			<option value="DESC">COM_MB2PORTFOLIO_DESC</option>				 
+        </field>
+		 
+		 
+		 <field name="projects_order_by"
+             type="list"
+             default="id"
+             label="COM_MB2PORTFOLIO_ORDER_BY"
+             description="">                 
+                 <option value="id">COM_MB2PORTFOLIO_ID</option>
+				 <option value="title">COM_MB2PORTFOLIO_TITLE</option>
+				 <option value="ordering">COM_MB2PORTFOLIO_ORDERING</option>
+				 <option value="created">COM_MB2PORTFOLIO_CREATED_DATE</option>
+				 <option value="modified">COM_MB2PORTFOLIO_MODIFIED_DATE</option>
+				 <option value="hits">JGLOBAL_HITS</option>				 
+         </field>
+		 
+		 <field type="spacer" />
+		 
+		 <field name="skills_order"
+             type="list"
+             default="DESC"
+             label="COM_MB2PORTFOLIO_SKILLS_ORDER"
+             description="">                 
+                 <option value="ASC">COM_MB2PORTFOLIO_ASC</option>
+				 <option value="DESC">COM_MB2PORTFOLIO_DESC</option>				 
+         </field>
+		 
+		 
+		 <field name="skills_order_by"
+             type="list"
+             default="id"
+             label="COM_MB2PORTFOLIO_SKILLS_ORDER_BY"
+             description="">                 
+                 <option value="id">COM_MB2PORTFOLIO_ID</option>
+				 <option value="title">COM_MB2PORTFOLIO_TITLE</option>
+				 <option value="ordering">COM_MB2PORTFOLIO_ORDERING</option>
+				 <option value="created">COM_MB2PORTFOLIO_CREATED_DATE</option>
+				 <option value="modified">COM_MB2PORTFOLIO_MODIFIED_DATE</option>				 
+         </field>
+		 
+		 <field type="spacer" />
+		 
+		 <field name="date_format" type="text" label="COM_MB2PORTFOLIO_DATE_FORMAT" description="COM_MB2PORTFOLIO_DATE_FORMAT_DESC" default="LC3" />
+		 
+		 		
+	</fieldset>
+	
+	
+	
+	
+	
+				
+		
+		
+		
+		<fieldset name="layout_projects" label="COM_MB2PORTFOLIO_LAYOUT_PROJECTS" description="">
+		
+		
+		
+		
+		
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_HEADING_LAYOUT" />
+		
+		
+		
+		<field name="cols"
+             type="list"
+             default="4"
+             label="COM_MB2PORTFOLIO_COLUMN"
+             description="">                 
+                 <option value="1">1</option>
+				 <option value="2">2</option>
+				 <option value="3">3</option>
+				 <option value="4">4</option>
+				 <option value="5">5</option>				 
+         </field>
+		 
+		
+		
+		
+		<field name="item_margin_lr" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ITEM_MARGIN_LR" description="" default="1" />
+		<field name="item_margin_b" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ITEM_MARGIN_BOTTOM" description="" default="30" />
+		 
+		 		
+				
+		<field name="projects_item_layout"
+             type="list"
+             default="media-desc-below"
+             label="COM_MB2PORTFOLIO_ITEM_LAYOUT"
+             description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_LAYOUT">                 
+                 <option value="media-desc">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC</option>
+				 <option value="desc-media">COM_MB2PORTFOLIO_LAYOUT_DESC_MEDIA</option>
+				 <option value="media-desc-below">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC_BELOW</option>	
+				 <option value="only-media">COM_MB2PORTFOLIO_LAYOUT_MEDIA_ONLY</option>			 
+         </field>
+		 
+		 
+		 <field name="projects_media_width" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_MEDIA_WIDTH" 
+			description="COM_MB2PORTFOLIO_MEDIA_WIDTH_DESC" 
+			default="50" 
+			required="false" 
+			filter="raw" 
+			maxlength="255" 
+		/>
+		
+		<!--
+		<field name="projects_media_margin" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_MEDIA_MARGIN" 
+			description="COM_MB2PORTFOLIO_FORM_DESC_MARGIN" 
+			default="0px 0px 15px 0px" 
+			filter="raw" 
+			maxlength="255" 
+		/>
+		 -->
+		 
+		 
+		 
+		 <field type="spacer" />
+		 <field type="spacer" label="COM_MB2PORTFOLIO_FORM_HEADING_PROJECT_DETAILS" />
+		 
+		 
+		 
+		 
+		 
+		 <field name="thumbnail_width" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_THUMBNAIL_WIDTH"
+            description=""                 
+            default="480"  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+			
+			
+			
+		<field name="thumbnail_height" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_THUMBNAIL_HEIGHT"
+            description=""                 
+            default="350"  
+            required="false" 
+            filter="string"
+            maxlength="255" /> 
+			
+		
+		
+		
+		<field name="projects_item_caption"
+             type="radio"
+			 class="btn-group"
+             default="0"
+             label="COM_MB2PORTFOLIO_IMAGE_CAPTIONS"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		
+		 <field type="spacer" />
+		
+		
+		<field name="video_embed"
+             type="radio"
+			 class="btn-group"
+             default="0"
+             label="COM_MB2PORTFOLIO_VIDEO_EMBED"
+             description="COM_MB2PORTFOLIO_VIDEO_EMBED_DESC">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 
+		 <field name="projects_slider"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_SLIDER"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		
+			
+			
+		<field type="spacer" />	
+			
+		<field name="title_text_limit" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_TITLE_TEXT_LIMIT"
+            description=""                
+            default="999"  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+					
+		
+		<field name="desc"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_INTRO_TEXT"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		
+		<field name="text_limit" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_TEXT_LIMIT"
+            description=""                
+            default="999"  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+			
+			
+			
+		<field type="spacer" />	
+				
+		
+		<field name="project_skills"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_PROJECT_SKILLS"
+             description="COM_MB2PORTFOLIO_PROJECT_SKILLS_DESC">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		
+		 
+		 
+		 
+		 
+		 <field name="project_skills_link"
+             type="radio"
+			 class="btn-group"
+             default="0"
+             label="COM_MB2PORTFOLIO_PROJECT_SKILLS_LINK"
+             description="COM_MB2PORTFOLIO_PROJECT_SKILLS_LINK_DESC">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 <field type="spacer" />
+		 
+		 <field name="projects_date" type="list" default="created" label="COM_MB2PORTFOLIO_DATE" description="">
+			<option value="created">COM_MB2PORTFOLIO_CREATED_DATE</option>
+			<option value="modified">COM_MB2PORTFOLIO_MODIFIED_DATE</option>
+			<option value="all">COM_MB2PORTFOLIO_ALL_DATE</option>
+			<option value="none">JNONE</option>				 
+     	</field>
+		
+		
+		
+		
+		<field type="spacer" />
+		
+		
+		
+		
+		
+		
+		<field name="projects_hits"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_HITS"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		
+		<field type="spacer" />
+		
+		
+		
+		
+		 
+		 <field name="read_more"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_READ_MORE"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>	
+			
+		
+		</fieldset>
+		
+		
+		
+		
+		
+		<fieldset name="layout_single_projects" label="COM_MB2PORTFOLIO_LAYOUT_SINGLE_PROJECT" description="">
+		
+		
+	
+		 <field type="spacer" label="COM_MB2PORTFOLIO_GENERAL" />
+		
+		<field name="item_navigation" 
+			type="radio" 
+			class="btn-group" 
+			default="1" 
+			label="COM_MB2PORTFOLIO_ITEM_NAVIGATION" 
+			description="">    	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+    	</field>
+	
+		<!--<field 
+			name="portfolio_link_back" 
+			type="radio"
+			class="btn-group" 
+			label="COM_MB2PORTFOLIO_FORM_LBL_BACK_TO_PORTFOLIO_LINK" 
+			description="" 
+			default="0"
+		>				
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		-->
+		
+		
+		
+		<field type="spacer" />	
+		
+		<field name="single_project_skills"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_MB2PORTFOLIO_PROJECT_SKILLS"
+			description="COM_MB2PORTFOLIO_PROJECT_SKILLS_DESC">                 
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+		</field>
+		
+		
+			 
+		<field name="single_project_skills_link" type="radio" class="btn-group" default="0" label="COM_MB2PORTFOLIO_PROJECT_SKILLS_LINK" description="COM_MB2PORTFOLIO_PROJECT_SKILLS_LINK_DESC">                 
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		
+		
+		<field type="spacer" />
+		
+		
+		<field name="single_project_date" type="list" default="created" label="COM_MB2PORTFOLIO_DATE" description="">
+			<option value="created">COM_MB2PORTFOLIO_CREATED_DATE</option>
+			<option value="modified">COM_MB2PORTFOLIO_MODIFIED_DATE</option>
+			<option value="all">COM_MB2PORTFOLIO_ALL_DATE</option>
+			<option value="none">JNONE</option>				 
+     	</field>
+		
+		
+		
+		 
+		 
+		 <field type="spacer" />
+		 
+		 
+		 
+		 
+		 <field name="single_project_hits"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_HITS"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 
+		  <field type="spacer" />
+		 
+		 
+		 
+		<field name="single_project_extra_fields_title" type="radio" class="btn-group" default="1" label="COM_MB2PORTFOLIO_EXTRA_FIELDS_TITLE" description="">                 
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		
+		<field type="spacer" />
+		
+		
+		
+		<field name="single_project_gooleplus" type="radio" class="btn-group" default="1" label="Google Plus" description="">                 
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		<field name="single_project_facebook" type="radio" class="btn-group" default="1" label="Facebook" description="">                 
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		<field name="single_project_twitter" type="radio" class="btn-group" default="1" label="Twitter" description="">                 
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		<field name="single_project_pinit" type="radio" class="btn-group" default="1" label="Pinit" description="">                 
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		<field name="single_project_email" type="radio" class="btn-group" default="1" label="Email" description="">                 
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		
+		
+		
+		
+		
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_HEADING_SINGLE_PAGE_RELATED" />
+		
+		
+		<field name="related_projects" 
+			type="radio" 
+			class="btn-group" 
+			default="1" 
+			label="COM_MB2PORTFOLIO_RELATED_PROJECTS" 
+			description="">    	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+   		</field>
+		
+		
+		<field name="related_carousel" 
+			type="radio" 
+			class="btn-group" 
+			default="0" 
+			label="COM_MB2PORTFOLIO_ITEMS_CAROUSEL" 
+			description="">    	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+   		</field>
+		
+		
+		
+		
+		
+	
+		<field name="related_cols"
+             type="list"
+             default="4"
+             label="COM_MB2PORTFOLIO_COLUMN"
+             description="">
+				 <option value="2">2</option>
+				 <option value="3">3</option>
+				 <option value="4">4</option>
+				 <option value="5">5</option>				 
+     	</field>
+		
+				
+		
+		<field name="related_items_limit" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_RELATED_ITEMS_COUNT" 
+			description="COM_MB2PORTFOLIO_RELATED_ITEMS_COUNT_DESC" 
+			default="15" 
+			filter="raw" 
+			maxlength="255" 
+		/>		
+	
+		
+		<field name="related_item_layout"
+             type="list"
+             default="media-desc-below"
+             label="COM_MB2PORTFOLIO_ITEM_LAYOUT"
+             description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_LAYOUT">                 
+                 <option value="media-desc">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC</option>
+				 <option value="desc-media">COM_MB2PORTFOLIO_LAYOUT_DESC_MEDIA</option>
+				 <option value="media-desc-below">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC_BELOW</option>
+				 <option value="only-media">COM_MB2PORTFOLIO_LAYOUT_MEDIA_ONLY</option>					 
+         </field>
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 <field name="related_media_width" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_MEDIA_WIDTH" 
+			description="COM_MB2PORTFOLIO_MEDIA_WIDTH_DESC" 
+			default="50" 
+			required="false" 
+			filter="raw" 
+			maxlength="255" 
+		/>
+	
+		<!--<field name="related_media_margin" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_MEDIA_MARGIN" 
+			description="COM_MB2PORTFOLIO_FORM_DESC_MARGIN" 
+			default="0px 0px 15px 0px" 
+			filter="raw" 
+			maxlength="255" 
+		/>	
+		-->
+		
+		
+		<field type="spacer" />
+		
+		
+		
+		
+		
+		
+		<field name="related_thumbnail_width" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_THUMBNAIL_WIDTH"
+            description=""                 
+            default="480"  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+			
+			
+			
+		<field name="related_thumbnail_height" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_THUMBNAIL_HEIGHT"
+            description=""                 
+            default="350"  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+		
+		
+		<field type="spacer" />
+		
+		
+		<field name="related_title_text_limit" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_TITLE_TEXT_LIMIT"
+            description=""                
+            default="999"  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+			
+		<field name="related_desc"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_INTRO_TEXT"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		
+		<field name="related_text_limit" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_TEXT_LIMIT"
+            description=""                
+            default="999"  
+            required="false" 
+            filter="string"
+            maxlength="255" />	
+			
+			
+			
+		<field type="spacer" />
+			
+		
+		<field name="related_project_skills"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_PROJECT_SKILLS"
+             description="COM_MB2PORTFOLIO_PROJECT_SKILLS_DESC">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		
+		 
+		 
+		 <field name="related_project_skills_link"
+             type="radio"
+			 class="btn-group"
+             default="0"
+             label="COM_MB2PORTFOLIO_PROJECT_SKILLS_LINK"
+             description="COM_MB2PORTFOLIO_PROJECT_SKILLS_LINK_DESC">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 <field type="spacer" />
+		 
+		 <field name="related_project_date" type="list" default="created" label="COM_MB2PORTFOLIO_DATE" description="">
+			<option value="created">COM_MB2PORTFOLIO_CREATED_DATE</option>
+			<option value="modified">COM_MB2PORTFOLIO_MODIFIED_DATE</option>
+			<option value="all">COM_MB2PORTFOLIO_ALL_DATE</option>
+			<option value="none">JNONE</option>				 
+     	</field>
+		
+		
+		 
+		 
+		 
+		 
+		 <field type="spacer" />
+		 
+		 
+		 
+		 <field name="related_project_hits"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_HITS"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 
+		 <field type="spacer" />
+		 
+		 
+		 
+		 
+		 <field name="related_read_more"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_READ_MORE"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+			
+			
+			
+		
+					
+			
+	</fieldset>
+	
+	
+	
+	
+	
+	
+	<fieldset name="layout_skills" label="COM_MB2PORTFOLIO_LAYOUT_SKILLS" description="">
+		
+	<field type="spacer" label="COM_MB2PORTFOLIO_FORM_HEADING_LAYOUT"/>
+				
+		
+		<field name="skills_cols"
+             type="list"
+             default="3"
+             label="COM_MB2PORTFOLIO_COLUMN"
+             description="">                 
+                 <option value="1">1</option>
+				 <option value="2">2</option>
+				 <option value="3">3</option>
+				 <option value="4">4</option>
+				 <option value="5">5</option>				 
+         </field>
+		 
+		 <field name="skills_item_layout"
+             type="list"
+             default="media-desc-below"
+             label="COM_MB2PORTFOLIO_ITEM_LAYOUT"
+             description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_LAYOUT">                 
+                 <option value="media-desc">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC</option>
+				 <option value="desc-media">COM_MB2PORTFOLIO_LAYOUT_DESC_MEDIA</option>
+				 <option value="media-desc-below">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC_BELOW</option>				 
+         </field>
+		 
+		 <field name="skills_media_width" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_MEDIA_WIDTH" 
+			description="" 
+			default="50" 
+			required="false" 
+			filter="raw" 
+			maxlength="255" 
+		/>	
+		
+		<!--<field name="skills_media_margin" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_MEDIA_MARGIN" 
+			description="COM_MB2PORTFOLIO_FORM_DESC_MARGIN" 
+			default="0px 0px 15px 0px" 
+			filter="raw" 
+			maxlength="255" 
+		/>-->
+		
+		
+		
+		
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_HEADING_SKILL_DETAILS" />
+		
+		
+		<field name="skills_image"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_SKILL_THUMBNAIL"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		
+		
+		<field name="skills_thumbnail_width" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_THUMBNAIL_WIDTH"
+            description=""                 
+            default="480"  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+			
+			
+			
+		<field name="skills_thumbnail_height" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_THUMBNAIL_HEIGHT"
+            description=""                 
+            default="350"  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+			
+		
+		<field name="skills_image_link"
+             type="hidden"
+             default="0"
+             label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_LINK"
+             description="">                 
+                <option value="0">COM_MB2PORTFOLIO_NONE</option>
+              <!--  <option value="1">COM_MB2PORTFOLIO_LINK_TO_BIG_IMAGE</option>
+				<option value="2">COM_MB2PORTFOLIO_LINK_TO_SKILL_PAGE</option>	-->			 
+         </field>
+		
+		
+		
+		
+		<field type="spacer" />
+		
+		<field name="skills_title"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_SKILL_TITLE"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>		 
+		 
+		 <field name="skills_title_link"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_SKILLCOM_MB2PORTFOLIO_LINK"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 	 
+		 <field name="skills_title_limit" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_TITLE_TEXT_LIMIT"
+            description=""                
+            default="999"  
+            required="false" 
+            filter="string"
+            maxlength="255" 
+		/>
+		 
+		<!-- <field name="projects_count"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_PROJECTS_COUNT"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 -->
+		 
+		 
+		 <field type="spacer" />
+		 
+		 
+		 
+		 <field name="skills_desc"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_SKILL_DESC"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 <field name="skills_desc_limit" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_TEXT_LIMIT"
+            description=""                
+            default="999"  
+            required="false" 
+            filter="string"
+            maxlength="255" 
+		/>
+		
+		
+		
+		
+		<field type="spacer" />
+		
+		
+		<field name="skills_read_more"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_SKILL_READ_MORE_LINK"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</fieldset>
+	
+	
+	
+	
+	
+	
+	<fieldset name="style" label="COM_MB2PORTFOLIO_STYLE_SECTION" description="">		
+		
+		
+		<field name="custom_color1" type="color" label="COM_MB2PORTFOLIO_CUSTOM_COLOR" description="COM_MB2PORTFOLIO_CUSTOM_COLOR_DESC" default="" />	
+		<field name="custom_css" type="textarea" label="COM_MB2PORTFOLIO_CUSTOM_CSS" description="COM_MB2PORTFOLIO_CUSTOM_CSS_DESC" cols="100" rows="8" filter="raw" />	
+		
+		
+						
+			
+	</fieldset>
+	
+	
+	
+		
+	
+	
+	
+	
+	<fieldset name="scripts" label="COM_MB2PORTFOLIO_SCRIPTS_SECTION" description="">
+		
+		
+		
+		
+		
+		<field type="spacer" label="COM_MB2PORTFOLIO_GENERAL" />
+		
+		
+		
+		
+		<field name="fa" type="radio" class="btn-group" default="1" label="Font Awesome" description="">                 
+  			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+     	</field>
+		
+		
+		<!--
+		
+		<field name="jquery"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_JQUERY"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		-->
+		
+		<!--
+		
+		<field name="easing" type="radio" class="btn-group" default="1" label="COM_MB2PORTFOLIO_EASING" description="">                 
+  			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+     	</field>
+		-->
+		
+		
+		<field name="crop_images" type="radio" class="btn-group" default="1" label="COM_MB2PORTFOLIO_CROP_IMAGES" description="">                 
+   			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+        </field>
+		
+		
+		
+		<field name="img_hover_effect" type="radio" class="btn-group" default="1" label="COM_MB2PORTFOLIO_IMAGES_HOVER_EFFECT" description="">                 
+   			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+        </field>
+		 
+		 
+		 
+		 
+		 <!--
+		 
+		 
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_HEADING_LIGHTBOX" />		 
+		 	-->
+		
+		<field name="lightbox" type="radio" class="btn-group" default="1" label="COM_MB2PORTFOLIO_LIGHTBOX" description="" >                 
+       		<option value="0">JNO</option>
+			<option value="1">JYES</option>					 
+        </field>
+		
+		<!--
+		
+		<field name="prettyphoto_script" type="radio" class="btn-group" default="1" label="COM_MB2PORTFOLIO_LIGHTBOX_PP_SCRIPT" description="">                 
+  			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+     	</field>
+		
+		
+		
+		<field name="nivo_script" type="radio" class="btn-group" default="1" label="COM_MB2PORTFOLIO_LIGHTBOX_NIVO_SCRIPT" description="">                 
+  			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+     	</field>
+		
+		-->
+		
+		
+		
+		<!--
+		
+		
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_HEADING_SLIDER" />
+		
+		
+		
+		
+		<field name="slider_type" type="list" default="2" label="COM_MB2PORTFOLIO_SLIDER_TYPE" description="">	
+			<option value="1">Bootstrap Carousel</option>
+			<option value="2">Flexslider</option>				 
+        </field>
+		
+		-->
+		
+		
+		
+		<!--
+		
+		
+		 
+		
+		
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_HEADING_FLEXSLIDER" />
+		
+		
+		
+		 <field name="flexslider" type="radio" class="btn-group" default="1" label="COM_MB2PORTFOLIO_FLEXSLIDER" description="">                 
+     		<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+         </field>
+		 
+	
+		
+		
+		
+		<field name="flexslider_slideshow_speed" type="text" default="5000" label="COM_MB2PORTFOLIO_FLEXSLIDER_SLIDESHOW_SPEED" description="" />
+		<field name="flexslider_animation_speed" type="text" default="600" label="COM_MB2PORTFOLIO_FLEXSLIDER_ANIMATION_SPEED" description="" />
+		
+		<field name="flexslider_control_nav" type="radio" default="0" class="btn-group" label="COM_MB2PORTFOLIO_FLEXSLIDER_CONTROLNAV" description="" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="flexslider_direct_nav" type="radio" default="1" class="btn-group" label="COM_MB2PORTFOLIO_FLEXSLIDER_DIRECTNAV" description="" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="flexslider_easing" type="list" default="easeInOutExpo" label="COM_MB2PORTFOLIO_FLEXSLIDER_EASING" description="">				
+				<option value="jswing">jswing</option>
+				<option value="easeInQuad">easeInQuad</option>
+				<option value="easeOutQuad">easeOutQuad</option>
+				<option value="easeInOutQuad">easeInOutQuad</option>
+				<option value="easeInCubic">easeInCubic</option>
+				<option value="easeOutCubic">easeOutCubic</option>
+				<option value="easeInOutCubic">easeInOutCubic</option>
+				<option value="easeInQuart">easeInQuart</option>
+				<option value="easeOutQuart">easeOutQuart</option>
+				<option value="easeInOutQuart">easeInOutQuart</option>
+				<option value="easeInSine">easeInSine</option>
+				<option value="easeOutSine">easeOutSine</option>
+				<option value="easeInOutSine">easeInOutSine</option>
+				<option value="easeInExpo">easeInExpo</option>
+				<option value="easeOutExpo">easeOutExpo</option>
+				<option value="easeInOutExpo">easeInOutExpo</option>
+				<option value="easeInQuint">easeInQuint</option>
+				<option value="easeOutQuint">easeOutQuint</option>
+				<option value="easeInOutQuint">easeInOutQuint</option>
+				<option value="easeInCirc">easeInCirc</option>
+				<option value="easeOutCirc">easeOutCirc</option>
+				<option value="easeInOutCirc">easeInOutCirc</option>
+				<option value="easeInElastic">easeInElastic</option>
+				<option value="easeOutElastic">easeOutElastic</option>
+				<option value="easeInOutElastic">easeInOutElastic</option>
+				<option value="easeInBack">easeInBack</option>
+				<option value="easeOutBack">easeOutBack</option>
+				<option value="easeInOutBack">easeInOutBack</option>
+				<option value="easeInBounce">easeInBounce</option>
+				<option value="easeOutBounce">easeOutBounce</option>
+				<option value="easeInOutBounce">easeInOutBounce</option>		
+		</field>
+			
+		
+		
+		
+		<field name="flexslider_slideshow" type="radio" default="1" class="btn-group" label="COM_MB2PORTFOLIO_FLEXSLIDER_SLIDESHOW" description="" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		 -->
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_HEADING_CAROUSEL" />
+		 
+		 
+		 <field name="carousel_script"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_CAROUSEL_SCRIPT"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 <field name="carousel_auto"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_CAROUSEL_SCROLL_AUTO"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 <field name="carousel_min_item" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_CAROUSEL_MIN_ITEM" 
+			description="" 
+			default="1" 
+			filter="raw" 
+			maxlength="255" 
+		/>
+		
+		
+		
+		<field name="carousel_scroll" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_CAROUSEL_SCROLL_ITEM" 
+			description="COM_MB2PORTFOLIO_CAROUSEL_SCROLL_ITEM_DESC" 
+			default="1" 
+			filter="raw" 
+			maxlength="255" 
+		/>	
+		
+		
+		<field name="carousel_pause_time" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_CAROUSEL_SCROLL_PAUSE_TIME" 
+			description="" 
+			default="7000" 
+			filter="raw" 
+			maxlength="255" 
+		/>
+		 
+		 
+		 
+		 <field name="carousel_direct_nav"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_CAROUSEL_DIRECT_NAV"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 <field name="carousel_control_nav"
+             type="radio"
+			 class="btn-group"
+             default="0"
+             label="COM_MB2PORTFOLIO_CAROUSEL_CONTROL_NAV"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 
+		 <field name="carousel_swipe"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_CAROUSEL_SWIPE"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 <!--
+		
+		
+		 <field name="carousel_nav_top_position" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_CAROUSEL_NAV_TOP" 
+			description="" 
+			default="-22" 
+			filter="raw" 
+			maxlength="255" 
+		/>	
+		
+		-->
+		
+		
+		
+		
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_HEADING_ISOTOPE" />
+		 
+		 
+		 <field name="isotope_script"
+             type="radio"
+			 class="btn-group"
+             default="1"
+             label="COM_MB2PORTFOLIO_ISOTOPE_SCRIPT"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 <field name="isotope_mode" type="list" default="fitRows" label="COM_MB2PORTFOLIO_ISOTOPE_MODE" description="">				
+				<option value="fitRows">fitRows</option>
+				<option value="masonry">masonry</option>		
+			</field>
+		 
+		 
+		 
+		 <!--
+		 
+		 <field name="isotope_animation_easing" type="list" default="easeInOutExpo" label="COM_MB2PORTFOLIO_ISOTOPE_EASING" description="">				
+				<option value="jswing">jswing</option>
+				<option value="easeInQuad">easeInQuad</option>
+				<option value="easeOutQuad">easeOutQuad</option>
+				<option value="easeInOutQuad">easeInOutQuad</option>
+				<option value="easeInCubic">easeInCubic</option>
+				<option value="easeOutCubic">easeOutCubic</option>
+				<option value="easeInOutCubic">easeInOutCubic</option>
+				<option value="easeInQuart">easeInQuart</option>
+				<option value="easeOutQuart">easeOutQuart</option>
+				<option value="easeInOutQuart">easeInOutQuart</option>
+				<option value="easeInSine">easeInSine</option>
+				<option value="easeOutSine">easeOutSine</option>
+				<option value="easeInOutSine">easeInOutSine</option>
+				<option value="easeInExpo">easeInExpo</option>
+				<option value="easeOutExpo">easeOutExpo</option>
+				<option value="easeInOutExpo">easeInOutExpo</option>
+				<option value="easeInQuint">easeInQuint</option>
+				<option value="easeOutQuint">easeOutQuint</option>
+				<option value="easeInOutQuint">easeInOutQuint</option>
+				<option value="easeInCirc">easeInCirc</option>
+				<option value="easeOutCirc">easeOutCirc</option>
+				<option value="easeInOutCirc">easeInOutCirc</option>
+				<option value="easeInElastic">easeInElastic</option>
+				<option value="easeOutElastic">easeOutElastic</option>
+				<option value="easeInOutElastic">easeInOutElastic</option>
+				<option value="easeInBack">easeInBack</option>
+				<option value="easeOutBack">easeOutBack</option>
+				<option value="easeInOutBack">easeInOutBack</option>
+				<option value="easeInBounce">easeInBounce</option>
+				<option value="easeOutBounce">easeOutBounce</option>
+				<option value="easeInOutBounce">easeInOutBounce</option>		
+			</field>
+			
+		
+		 
+		 
+		 <field name="isotope_animation_duration" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_ISOTOPE_ANIMATION_DURATION" 
+			description="" 
+			default="250" 
+			filter="raw" 
+			maxlength="255" 
+		/>
+		
+		
+		
+		
+		
+		<field name="isotope_queue"
+             type="radio"
+			 class="btn-group"
+             default="0"
+             label="COM_MB2PORTFOLIO_ISOTOPE_QUEUE"
+             description="">                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>-->
+		 		 
+		 
+		 
+		 
+		 
+		 		
+			
+	</fieldset>
+	
+	
+	
+	
+	
+	
+	<fieldset name="help" label="COM_MB2PORTFOLIO_HELP" description="COM_MB2PORTFOLIO_HELP_DESC"></fieldset>
+	
+
+	<fieldset name="permissions"
+		description="JCONFIG_PERMISSIONS_DESC"
+		label="JCONFIG_PERMISSIONS"
+	>
+
+		<field 
+            name="rules" 
+            type="rules"
+			component="com_mb2portfolio"
+            class="inputbox"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS"
+			section="component" />
+	</fieldset>
+	
+	
+
+</config>

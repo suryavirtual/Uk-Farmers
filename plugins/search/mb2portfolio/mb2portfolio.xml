@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search">
+	<name>Search - Mb2 Portfolio</name>
+	<author>Mariusz Boloz</author>
+	<creationDate>April 2014</creationDate>
+	<copyright>Copyright (C) 2013 Mariusz Boloz (http://marbol2.com) All rights reserved.</copyright>
+	<license>GNU/GPL (http://www.gnu.org/copyleft/gpl.html)</license>
+	<authorEmail>mariuszboloz@gmail.com</authorEmail>
+	<authorUrl>www.marbol2.com</authorUrl>
+    <version>2.3.1</version>
+    <description>Search Plugin for Mb2 Portfolio Component.</description>	
+	<files>
+		<filename plugin="mb2portfolio">mb2portfolio.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_search_mb2portfolio.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="search_limit" type="text"
+					default="50"
+					description=""
+					label="JFIELD_PLG_MB2PORTFOLIOSEARCH_SEARCHLIMIT_LABEL"
+					size="5"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

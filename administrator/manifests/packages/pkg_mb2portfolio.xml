@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0">
+	<name>Mb2 Portfolio</name>
+	<author>Mariusz Boloz</author>
+	<creationDate>May 2013</creationDate>
+	<packagename>mb2portfolio</packagename>
+	<version>2.3.1</version>
+	<url>http://www.marbol2.com</url>
+	<copyright>Copyright (C) 2013 Mariusz Boloz (http://marbol2.com) All rights reserved.</copyright>
+	<license>GNU/GPL (http://www.gnu.org/copyleft/gpl.html)</license>
+	<packager>marbol2</packager>
+	<packagerurl>http://www.marbol2.com/</packagerurl>
+	<description>Installed extensions: 1) Mb2 Portfolio Component 2) Mb2 Portfolio Module 2) Mb2 Portfolio Search Plugin.</description>	
+	<update></update>	
+	<files folder="pkg">
+		<file type="component" id="com_mb2portfolio" >com_mb2portfolio.zip</file>
+		<file type="module" id="mod_mb2portfolio" client="site">mod_mb2portfolio.zip</file>
+		<file type="plugin" id="mb2portfolio" group="search">plg_search_mb2portfolio.zip</file>		
+	</files>
+</extension>

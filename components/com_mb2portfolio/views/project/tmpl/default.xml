@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_MB2PORTFOLIO_SINGLE_PROJECT_TITLE_MENU" option="View">
+	<message>
+		<![CDATA[COM_MB2PORTFOLIO_SINGLE_PROJECT_TITLE_MENU_DESC]]>
+	</message>
+	</layout>
+	
+	
+	<fields name="request">
+		<fieldset name="request" addfieldpath="">
+			<field
+    			name="id"
+    			query="SELECT `id`, `title` FROM #__mb2portfolio WHERE state=1 ORDER BY `id`"
+                type="sql"
+                key_field="id" 
+                value_field="title"
+    			label="COM_MB2PORTFOLIO_SELECT_PROJECT"
+                require="true"
+    			description="">
+            </field>
+		</fieldset>
+	</fields>
+	
+	
+	
+	
+	<fields name="params">
+	
+	<fieldset name="general" label="COM_MB2PORTFOLIO_OPTIONS">
+	
+		<field name="item_navigation" 
+			type="list"
+			default="" 
+			label="COM_MB2PORTFOLIO_ITEM_NAVIGATION" 
+			description="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>    	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+    	</field>		
+		<!--
+		<field name="portfolio_link_back" 
+			type="list"
+			default="" 
+			label="COM_MB2PORTFOLIO_FORM_LBL_BACK_TO_PORTFOLIO" 
+			description="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>    	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+    	</field>	
+		-->
+		
+		<field type="spacer" />
+		
+		<field name="single_project_skills"
+			type="list"
+			default=""
+			label="COM_MB2PORTFOLIO_PROJECT_SKILLS"
+			description="COM_MB2PORTFOLIO_PROJECT_SKILLS_DESC">                 
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+		</field>
+		
+		
+		
+		
+			 
+		<field name="single_project_skills_link"
+			type="list"
+			default=""
+			label="COM_MB2PORTFOLIO_PROJECT_SKILLS_LINK"
+			description="COM_MB2PORTFOLIO_PROJECT_SKILLS_LINK_DESC">                 
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+		</field>
+		
+		
+		
+		
+		<field type="spacer" />
+		
+		
+		
+		<field name="single_project_date" type="list" default="" label="COM_MB2PORTFOLIO_DATE" description="">
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="created">COM_MB2PORTFOLIO_CREATED_DATE</option>
+			<option value="modified">COM_MB2PORTFOLIO_MODIFIED_DATE</option>
+			<option value="all">COM_MB2PORTFOLIO_ALL_DATE</option>
+			<option value="none">JNONE</option>				 
+     	</field>
+		
+		
+		
+		
+		
+		<field type="spacer" />
+		
+		
+		
+		
+		
+		<field name="single_project_hits"
+            type="list"
+			default=""
+			label="COM_MB2PORTFOLIO_HITS"
+			description="">                 
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+		</field>
+		 
+		 
+		 
+		 
+		
+		
+		
+		
+		
+		<field type="spacer" />
+		
+		
+		
+		<field name="single_project_extra_fields_title"
+			type="list"
+			default=""
+			label="COM_MB2PORTFOLIO_EXTRA_FIELDS_TITLE"
+			description="">                 
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+		</field>
+		
+		
+		
+		
+		
+		<field type="spacer" />
+		
+		
+		
+		
+		
+		
+		<field name="single_project_gooleplus" type="list" class="btn-group" default="" label="Google Plus" description=""> 
+			<option value="">JGLOBAL_USE_GLOBAL</option>                
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		<field name="single_project_facebook" type="list" class="btn-group" default="" label="Facebook" description="">                 
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		<field name="single_project_twitter" type="list" class="btn-group" default="" label="Twitter" description="">                 
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		<field name="single_project_pinit" type="list" class="btn-group" default="" label="Pinit" description="">                 
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		<field name="single_project_email" type="list" class="btn-group" default="" label="Email" description="">                 
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>				 
+		</field>
+		
+		
+		
+		
+		
+		
+		
+		
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_HEADING_SINGLE_PAGE_RELATED" />
+		
+		
+		<field name="related_projects" 
+			type="list"
+			default="" 
+			label="COM_MB2PORTFOLIO_RELATED_PROJECTS" 
+			description="">    	
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+   		</field>
+	
+		<field name="related_cols"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_COLUMN"
+             description="">
+				 <option value="">JGLOBAL_USE_GLOBAL</option>
+				 <option value="2">2</option>
+				 <option value="3">3</option>
+				 <option value="4">4</option>
+				 <option value="5">5</option>				 
+     	</field>	
+		
+		
+		<field name="related_carousel" 
+			type="list"
+			default="" 
+			label="COM_MB2PORTFOLIO_ITEMS_CAROUSEL" 
+			description=""> 
+				<option value="">JGLOBAL_USE_GLOBAL</option>   	
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+   		</field>
+		
+		
+		
+		<field name="related_items_limit" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_RELATED_ITEMS_COUNT" 
+			description="COM_MB2PORTFOLIO_RELATED_ITEMS_COUNT_DESC" 
+			default="" 
+			filter="raw" 
+			maxlength="255" 
+		/>
+		
+		
+		<field name="related_item_layout"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_ITEM_LAYOUT"
+             description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_LAYOUT">                 
+                 <option value="">JGLOBAL_USE_GLOBAL</option>
+				 <option value="media-desc">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC</option>
+				 <option value="desc-media">COM_MB2PORTFOLIO_LAYOUT_DESC_MEDIA</option>
+				 <option value="media-desc-below">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC_BELOW</option>	
+				 <option value="only-media">COM_MB2PORTFOLIO_LAYOUT_MEDIA_ONLY</option>			 
+         </field>
+		 
+		 <field name="related_media_width" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_MEDIA_WIDTH" 
+			description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_LAYOUT" 
+			default="" 
+			required="false" 
+			filter="raw" 
+			maxlength="255" 
+		/>
+	
+		
+		
+		
+		<field type="spacer" />
+		
+		
+		
+		<field name="related_thumbnail_width" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_THUMBNAIL_WIDTH"
+            description=""                 
+            default=""  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+			
+			
+			
+		<field name="related_thumbnail_height" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_THUMBNAIL_HEIGHT"
+            description=""                 
+            default=""  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+		
+		
+		
+		
+		<field type="spacer" />
+		
+		
+		<field name="related_title_text_limit" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_TITLE_TEXT_LIMIT"
+            description=""                
+            default=""  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+			
+		<field name="related_desc"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_INTRO_TEXT"
+             description=""> 
+			  	<option value="">JGLOBAL_USE_GLOBAL</option>                
+                <option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+         </field>
+		
+		<field name="related_text_limit" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_TEXT_LIMIT"
+            description=""                
+            default=""  
+            required="false" 
+            filter="string"
+            maxlength="255" />	
+		
+		
+		
+		<field type="spacer" />
+		
+		<field name="related_project_skills"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_PROJECT_SKILLS"
+             description="COM_MB2PORTFOLIO_PROJECT_SKILLS_DESC">                 
+                 <option value="">JGLOBAL_USE_GLOBAL</option>
+				 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 <field name="related_project_skills_title"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_PROJECT_SKILLS_TITLE"
+             description=""> 
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>                
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 <field name="related_project_skills_link"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_PROJECT_SKILLS_LINK"
+             description="COM_MB2PORTFOLIO_PROJECT_SKILLS_LINK_DESC">                 
+                 <option value="">JGLOBAL_USE_GLOBAL</option>
+				 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 <field type="spacer" />
+		 
+		 
+		 
+		 
+		 <field name="related_project_date" type="list" default="" label="COM_MB2PORTFOLIO_DATE" description="">
+		 	<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="created">COM_MB2PORTFOLIO_CREATED_DATE</option>
+			<option value="modified">COM_MB2PORTFOLIO_MODIFIED_DATE</option>
+			<option value="all">COM_MB2PORTFOLIO_ALL_DATE</option>
+			<option value="none">JNONE</option>				 
+     	</field>
+		
+		
+		<field name="related_project_date_title"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_DATE_TITLE"
+             description="">
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>                 
+                <option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 
+		 
+		 <field type="spacer" />
+		 
+		 
+		 
+		 
+		  <field name="related_project_hits"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_HITS"
+             description="">  
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>               
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 
+		 <field name="related_project_hits_title"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_HITS_TITLE"
+             description="">  
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>               
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 
+		  <field type="spacer" />
+		 
+		 
+		 
+		 <field name="related_read_more"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_READ_MORE"
+             description=""> 
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>                
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 
+	
+	</fieldset>
+	
+	</fields>
+	
+	
+	
+	
+	
+	
+</metadata>

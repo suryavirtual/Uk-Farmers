@@ -1,0 +1,122 @@
+.media-preview {
+  width: 100%;
+}
+#jform_params_imgpath_preview_img {
+  overflow: hidden;
+  position: relative;
+  margin:10px 0 0 0;
+  border: 1px solid #eee;
+}
+
+/* ++ MARKER ++ */
+#jform_params_imgpath_preview_img .point {
+  background: url("../../../assets/images/icon-marker-default.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  z-index: 2;
+}
+
+#jform_params_imgpath_preview_img .point:hover {
+    cursor: pointer;
+}
+
+#jform_params_imgpath_preview_img .point.ui-draggable:hover {
+    cursor: move;
+}
+
+#jform_params_imgpath_preview_img .point span.hide {
+    display: none;
+}
+
+#jform_params_imgpath_preview_img .point.active {
+    border: 3px solid #51A351;
+    background-color: #FFF;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+#jform_params_imgpath_preview_img .ja-marker-default {
+  background: url("../../../assets/images/icon-marker-default.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-cloud {
+  background: url("../../../assets/images/icon-marker-cloud.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-study {
+  background: url("../../../assets/images/icon-marker-study.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-star {
+  background: url("../../../assets/images/icon-marker-star.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-truck {
+  background: url("../../../assets/images/icon-marker-truck.png");
+}
+
+
+#jform_params_imgpath_preview_img .ja-marker-default_orange {
+  background: url("../../../assets/images/colors/orange/icon-marker-default.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-cloud_orange {
+  background: url("../../../assets/images/colors/orange/icon-marker-cloud.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-study_orange {
+  background: url("../../../assets/images/colors/orange/icon-marker-study.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-star_orange {
+  background: url("../../../assets/images/colors/orange/icon-marker-star.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-truck_orange {
+  background: url("../../../assets/images/colors/orange/icon-marker-truck.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-default_red {
+  background: url("../../../assets/images/colors/red/icon-marker-default.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-cloud_red {
+  background: url("../../../assets/images/colors/red/icon-marker-cloud.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-study_red {
+  background: url("../../../assets/images/colors/red/icon-marker-study.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-star_red {
+  background: url("../../../assets/images/colors/red/icon-marker-star.png");
+}
+
+#jform_params_imgpath_preview_img .ja-marker-truck_red {
+  background: url("../../../assets/images/colors/red/icon-marker-truck.png");
+}
+/* -- MARKER -- */
+
+#jform_params_imgpath_preview_img img{
+  margin: 0;
+  padding: 0;
+}
+#extrafieldimg #extrafield-action{
+  margin-bottom: 20px;
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+#extrafieldimg .deactive{
+	display:none;
+}
+#extrafieldimg .active{
+	display:block;
+}
+#extrafieldimg ul, #extrafieldimg ul, #extrafieldimg li {
+    list-style: none;
+    margin: 5px 0;
+}

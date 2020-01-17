@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+       <field name="id" type="text" default="0" label="COM_MB2PORTFOLIO_FORM_LBL_SKILL_ID" readonly="true" class="readonly" /> 
+       <field name="title" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_SKILL_TITLE" required="true"  /> 
+       <field name="alias" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_SKILL_ALIAS" />		
+		<field name="state" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" default="1">
+        	<option value="1">JPUBLISHED</option>
+        	<option value="0">JUNPUBLISHED</option>
+    	</field>
+		<field name="created" type="calendar" label="COM_MB2PORTFOLIO_FORM_LBL_CREATED_DATE" format="%Y-%m-%d %H:%M:%S" fiter="user_utc" />
+		<field name="modified" type="calendar" disabled="true" default="NOW" label="COM_MB2PORTFOLIO_FORM_LBL_MODIFIED_DATE" format="%Y-%m-%d %H:%M:%S" fiter="user_utc" />	
+		<field name="access" type="accesslevel" default="1" label="JFIELD_ACCESS_LABEL"	description="JFIELD_ACCESS_DESC" size="1" required="false" /> 
+		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"	description=""  size="1">
+			<option value="*">JALL</option>
+		</field>
+		
+		
+
+       <field name="image" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_SKILL_IMAGE" /> 
+
+       <field name="description" type="editor" label="COM_MB2PORTFOLIO_FORM_LBL_SKILL_DESCRIPTION" buttons="false" class="inputbox" filter="raw" /> 
+
+       
+
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_USER_SUPPLIER_VIEW_DEFAULT_PRODUCT_TITLE" option="COM_USER_SUPPLIER_VIEW_DEFAULT_PRODUCT_OPTION">
+		
+		<message>
+			<![CDATA[COM_USER_SUPPLIER_VIEW_DEFAULT_PRODUCT_DESC]]>
+		</message>
+	</layout>
+</metadata>
+

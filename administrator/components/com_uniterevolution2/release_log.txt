@@ -1,0 +1,475 @@
+version 4.5.95 b5
+
+-bug fix: removed notice about usestqaticlayers variable
+
+
+version 4.5.95 b4
+
+- bug fix: fixed slider one slide mode
+
+version 4.5.95 b3
+
+-bug fix: fixed some bug with use_hammer variable
+
+version 4.5.95 b2
+
+- change: changed all the imagesa to relative paths
+- bug fix: fixed external link background image
+
+version 4.5.95 b1
+
+- bug fix: fixed thumb navigation type
+
+version 4.5.95
+
+-feature: Fixed Flickering effects on mobile devices
+-feature: Fixed stuttering on animation with many layers
+-feature: Fixed Ken Burn animation failures after few Transition types
+-feature: Added Safari 3d Back to Transitions
+-feature: Fixed some broken Slide Transitions
+-feature: Fixed IE8 transition failres, fall back always on Fade
+
+
+version 4.5.9
+
+- feature: Drag and Rotate the Layer Content to set a 2D Rotation per element
+- feature: Drag and Resize Elements, images, Contents for better text breaks, and more flexibility
+- feature: Now also Split Animated Text content can be Rotated
+- feature: Added feature to allow Looped Animation and Rotated Content
+
+- change: Reenabled Link ID, Class, Title and Rel in Slide Editor
+- change: Minimized Style Output in the Document, only used Layer Styles are really loaded
+- change: Changed the Aq_Resize name to prevend conflicts with other themes that also use it and modified code in it
+- change: Updated GreenSock Engine to 12.1
+- change: Protected Mode for GreenSock for ThemePunch Plugins added. No more conflict between any other plugins / themes and ThemePunch Tools
+- change: Lag Smoothing Enabled
+
+-bug fix:  Fixed Vimeo First Auto Play issue
+-bug fix:  Fixed unseletable elements in Locked Mode
+-bug fix:  Fixed Output Failure if Rotated and Looped Animation has been selected
+-bug fix:  Various Bug fix in Drag And Drop Editor
+-bug fix:  Fix of Background Image if Screen size less Then Grid Width, postion of Elements and BG backend and frontend looked different
+-bug fix:  Various Fixes for Mobile Styling.  Broken Transitions, bad performance on Mobile devices
+-bug fix:  Bug with Rotated Layers on Backend fixed
+-bug fix:  Bug with MAx Width and Max Height of elements was not visible in Backend
+-bug fix:  White Space Bugs - Backend was not displaying settings of White Spaces
+-bug fix:  Ken Burn Images on backend was distorted if Window has been resized
+-bug fix:  Fullscreen Layout Without Offset Heights got the Wrong Height
+-bug fix:  Bug fixed where Parallax Mode for Mobile Disabled breaks the 2nd and further Slider Positions
+
+version 4.5.5 b3
+
+-fixed admin js bugs with Tips Class
+
+version 4.5.5 b2
+
+-bug fix:  static_slides table is crated now within install
+-bug fix:  static slides styles update added
+
+version 4.5.5
+
+- feature: Option to disable parallax on mobile added
+- feature: Option to add an offset in px or % to FullScreen Slider
+- feature: Two new Slide transitions: Parallax Vertical and Parallax Horizontal
+- feature: Static Layers added. Can be found under Slide List (new button called "Edit Static Layers")
+- feature: Possibility added to insert id, class, attr and i.e. own data attributes to each specific Slide
+- feature: data-parallaxoffset attribute is now available and updated on Scroll.  This value can be interesting for Developers to read current Parallax Offsets of the elements with the jQuery selector .tp-parallax-container  (Possible usage for Blur, Fade, Rotation effects based on the values)
+
+- change: Static Layers now have to be enable in each Slider for usage (can be found in General Settings tab)
+- change: onChange Event delivers the Slide Index and the Slide jQuery Object now
+- change: Global option JavaScript into footer now also adds the revslider calls into the footer
+
+- bug fix: Lazy Loading bug in combination with Static Layers fixed
+- bug fix: "Hide Slider Under" option did not redraw the Layers after Resize. Bug is fixed
+- bug fix: YouTube Video Bug with Overlay Image on Mobile Devices.
+- bug fix: IE8 and IE9 Slide Link Bug Fixed
+- bug fix: Layers sometimes not fading out fixed
+- bug fix: IE jQuery bugfix
+- bug fix: Responsive Through All Levels fixed where checkbox would be always checked on each element after reload of Slide Editor
+- bug fix: Thumbnail is not Showing has been fixed
+- bug fix: Auto Play only First Time on Videos (YouTube and Vimeo) did not work well.
+- bug fix: Imported layers will be stripped of slashes now
+
+
+version 4.5
+
+- feature: Improved Backend Functionality
+- feature: Added a timeline based editor for better & easier handling of layer times
+- feature: Added a timeline based editor for better & easier handling of layer times
+- feature: Loop Effect now available. Choose between four loop types for each layer in the Slide Editor under "Layer Animations"
+- feature: Parallax Effect now available. Enable it in Slider Settings in the Parallax Tab and set your desired level of each layer in Slide Settings
+- feature: Parallax on Mouse Movement Added
+- feature: Parallax on Scroll Added with Background fixed or Scrolled Options
+- feature: Parallax on Mobile Device Tilt
+- feature: New Grid/Snap functionality in Slide Editor for better positioning of elements
+- feature: New Grid/Snap functionality in Slide Editor for better positioning of elements
+- feature: Option added to not load the Slider on Mobile devices
+- feature: 2D rotation options added to layers in Slide Editor
+- feature: New navigation types called preview1, preview2, preview3, preview4 and custom
+- feature: Custom CSS and JavaScript can now be added directly in each Slider
+- feature: Placeholder of Slider at Page load will be auto generated. No more Jump Vertically during Slider is loading
+- feature: Added Performance Boost optional, where Outgoing Layers first animated before next slide is played. Helps if many layers added to one Slide
+- feature: Reburn of Pan Zoom Effect on FullScreen, FullWidth and Boxed layout with a complete new Engine
+
+- change: Check if more then one instance of Slider Revolution exists
+- change: Added check if hammer.js is already included
+- change: Added allowfullscreen="true" into YouTube video iFrame output
+- change: Using now Aqua Resizer for thumbnail generation
+- change: Pagination added to the Slide Overview page
+- change: Added Sorting of Slides based on names or Shortcode in Slider Overview page
+- change: Video ID of YouTube and Vimeo can now be changed on editing a layer
+- change: Removed the JavaScript inside of the href attribute of buttons from the Slide Editor
+
+- bug fix: Fixed a bug where layer positions in slide editor where not correctly calculated if the layer had a padding or margin.
+- bug fix: white-space and max-width/max-height are now correctly shown in Slide Editor.
+- bug fix: white-space and max-width/max-height are now correctly shown in Slide Editor.
+- bug fix: Visible Last slide at Loading fixed
+- bug fix: Visible Navigation Elements on Load fixed
+
+
+
+
+version 4.3.8 b4
+
+-bug fix: fixed css captions saving (removed strip slashes).
+
+version 4.3.8 b3
+
+-bug fix: fixed css glitch in small icons in sliders view in chrome browser
+
+version 4.3.8 b2
+
+- bug fix: when changing url's added change thumb image.
+
+version 4.3.8 b1
+
+- feature: added permissions
+
+version 4.3.8
+
+- bug fix: added px to height css in fullwidth Sliders
+- bug fix: Ken Burns Dobble Start after changing the slide
+
+version 4.3.6 b3
+
+- bug fix: fixed translations layer_caption not exists bug
+- bug fix: fixed admin bug with SquizBox.initialize
+
+version 4.3.6 b2
+
+- change: bring back the dynamic-captions.css generation.
+
+version 4.3.6
+- updated to latest version from wp
+- feature: Added Swipe Up & Down to scroll below or above the slider on Mobile Devices
+- change: added global option - enable / disable translations in the code.
+- change: Ken Burns and Pan Zoom Effect Engine Change. Animation based on Img rotations and Zooms, Transitions instead of Background animation. Due this change the Aniamtions become really Smooth and Clean.
+- bugfix: Fixed some compability issues with custom captions
+- bugfix: Fixed Click and Taps bugs on Elements in Slider viewing Slider in Mobile Devices
+- bugfix: Fixed Positions of Videos after leaving Fullscreen Video Playback
+- bugfix: Fixed Element Transitions by clicking Next/previous Slider before Elements has been shown. Currently Not Visible Elements will not show up suddenly any more.
+- bugfix: fixed google font insertion in slider settings.
+
+
+version 4.3.3 b4
+
+-feature: added text translations from wordpress in admin side
+
+
+version 4.3.3 b3
+
+-bug fix: css edit advanced settings was empty after save with ' character
+
+version 4.3.3 b2
+
+- bug fix: fixed the devide slide bug
+
+version 4.3.3
+
+- updated to newest version from wp
+
+- feature: Added Option keyboardNavigation to allow Navigation with left/right arrows
+- change: Removed video-js plugin and added Browser Native HTML5 Video Player
+- change: turned off dynamic_captions.css, load only dynamic captions
+- bug fix: KenBurn effect "End Position" fix if percentage is choosen
+- bug fix: Fixed HTML5 Video Loading issues
+- bug fix: Fixed Android Device Swipe Feature
+
+
+version 4.3.1 b2
+
+- change: removed wordpress related fields in sliders list
+- bug fix: remove youtube iframe border
+- bug fix: couldn't create only one slide
+
+version 4.3.1
+
+- updated to newest version from wp
+
+-feature: Added Options like Swipe Velocity, Swipe Min/Max Touches
+-feature: Added Drag Block Vertical option to prevent verticall scroll if needed. Default (false)
+-bug fix: Fix if Slider does not load after Touch Option is Disabled
+-bug fix: BugFix for FireFox Timer Line - Visibilty of Timer was ignored in Firefox and IE
+
+version 4.2.6 b2
+
+-bug fix: fixed html5 videojs include url
+-bug fix: fixed css bugs on video chooser
+
+version 4.2.6
+
+- updated to newest version from wp
+
+- feature: New Slider Setting option: Hide Mobile Nav After in Mobile Visibility Tab
+
+- change: Calculation of forceFullScreenAlign Positions. Resized Positions are More exact
+- change: Replacement of rel=0 in youtube video layer disabled
+- change: Added Hide Slider under "window width" for all type of Slider Layouts. Slider is stopped / started depends on the Window size also
+
+- bug fix: Small general export/import adjustments
+- bug fix: Missing static-captions.css text in console on slider preview removed
+- bug fix: YouTube: Hide Controls do now work
+- bug fix: YouTube/Vimeo allow now to insert direct URL or ID
+- bug fix: YouTube rel=0 fix
+- bug fix: YouTube iOS Fix for Replaying videos on 2nd Call
+- bug fix: StopOnHover set to 1 Bug has been fixed
+  
+
+version 4.2.5 b2:
+
+- bug fix: fixed client side slide background image change 
+
+version 4.2.5:
+
+- updated to newest version from wp.
+- fixed bug in admin preview that the captions didn't showed
+
+version 4.2.2 b2:
+
+- bug fix: changed admin side caption include 
+
+version 4.2.2:
+
+- updated to latest versio from wp
+
+-bug fix: In case HTML5 Video Js Loads later then Meta of Video will not fire the Auto Play Option
+-bug fix: Fixed YouTube Api, changed youtube api load to permanent Https
+-bug fix: Fixed HTML5 Video Preload. A Waiting process added for Video JS and Stream preloads
+=bug fix: Fixed Vimeo API Preloads
+
+
+version 4.2:
+
+- updated to latest version from wp
+
+- feature: Added Char, Word and Line Based Text animation to improve the Visual Experience on the Layer Animations
+- feature: Added 5 Different Loader Spinner with Live Preview Selector
+- feature: Added remove Thumbnail in Slide Editor
+- feature: Added white-space, maxwidth and maxheight options
+- feature: ID, Class, Title & Rel attribute for Links on images added
+- feature: Added files so that google does not index internal files
+
+- change: Improved Loading Speed. Slider loads over 1-2 sec quicker than before.
+- change: Improved Lazy Loading, to load Images and Layer images on demand. Intelligent Preloading of next slide Elements.
+- change: Auto Thumbnail Function, small copy of Slider Image, or Colorer BG used as Default.
+- change: instead of a fatal error, the none existence of ZipArchive will now give a more gently message
+
+- bug fix: Fixed some css glitches in slide settings.
+- bug fix: Fixed YouTube Api
+- bug fix: CSS editor bugfix where custom styles were set into other choosen layers
+- bug fix: Small adjustment for css editor that caused problems on some installations
+- bug fix: Fixed Overlapping layers if Mixed Align Mode used in Slide
+- bug fix: Fixed Pause/Resume function if Navigation elements has been hovered.
+- bug fix: Fixed revsldier and bootstrap functionality
+
+
+
+version 4.1.3 b9:
+
+- bug fix: improved remove mootools function, it works even if mootools added after slider
+- bug fix: fixed wpEmulator class, added protection agains another class includes.
+
+version 4.1.3 b8:
+
+- change: changes help links to unitecms.net website.
+
+version 4.1.3 b7:
+
+- change: remove do_shortcode function from wpemulator
+
+version 4.1.3 b6:
+
+- bug fix: fixed slider import / export from joomla and wordpress
+
+version 4.1.3 b5:
+
+-bug fix: delete dynamic captions file on update slider
+
+version 4.1.3 b4:
+
+- bug fix: fixed path to transparent images and to video js
+
+version 4.1.3 b3:
+
+- bug fix: change module name to revolution slider 3 also.
+
+version 4.1.3 b2:
+
+- change: renamed component name to com_uniterevolution 2
+
+version 4.1.3:
+
+- updated to latest version from wordpress
+
+version 2.2.8:
+
+- bug fix: fixed preview image output
+
+version 2.2.7:
+
+- bug fix: fixed preview ordering
+
+version 2.2.6:
+
+-bug fix: fixed https jquery include output
+
+version 2.2.5:
+
+- protections: remove border from iframe in video output
+
+version 2.2.4:
+
+-bug fix: solved flickering thumbs issue in safary
+
+version 2.2.3:
+
+-bug fix: fixed vimeo id php output
+
+version 2.2.2:
+
+- bug fix: fix preview slide with html input
+
+version 2.2.1:
+
+- bug fix: fixed some vulnarability with the image php output 
+
+version 2.2:
+
+- feature: added alt text for background image
+- change: added z-index:0 in settings.css for easy handling with the menus
+- bug fix: fixed some random rorate out js bug for layers.
+
+version 2.1.10:
+
+changed a little bit uninstall script
+
+version 2.1.9:
+
+- update jquery to 1.8.3 - it fixed the ie9 transitions
+
+version 2.1.8:
+
+- bug fix: fixed link to slide 
+
+version 2.1.7:
+
+- bug fix: fixed php image crop on joomla3 
+
+version 2.1.6:
+
+-feature: added better navigation position options 
+
+version 2.1.5:
+
+- bug fix: fixed some another php strict standards
+- bug fix: fixed safary browser performance issues - big memory allocation. 
+
+version 2.1.4:
+
+- bug fix: on some version of joomla the "new" button didn't worked
+- bug fix: done https output for all the components when ssl enabled. 
+
+version 2.1.3:
+
+- bug fix: fixed some php strict standarts bugs
+
+version 2.1.2:
+
+- bug fix: removed limit of number of slides to 20 from the slides list.
+
+version 2.1.1:
+
+- bug fix: fixed ie9 transitions. Updated to the final wp engine.
+
+version 2.1:
+
+- feature: added joomla3 support
+- bug fix: fixed fade transitions in IE
+
+version 2.0.4:
+
+- bug fix: fixed put js in body.
+- feature: added "revolution slider" id to jquery include
+
+version 2.0.3
+
+- bug fix: added alt text for img tag taken from the image filename
+- bug fix: fixed some language texts in the backend.
+
+version 2.0
+
+- added all updated from the wordpress version.
+
+version 1.5.3
+
+- fixed some bug in js when set boxslide effect to first slide.
+
+version 1.5.2
+
+- updated to the new plugin version.
+- fixed the onhover stop functionality
+- updated the navigation images
+
+version 1.5.1
+
+- bug fix: Fixed strict php type bugs
+- bug fix: Timer was not appearing at the bottom.
+- protection: remove the captions.css from the initial install, and copy it on the first run. That way the captions.css won't be deleted on update.
+
+version 1.5
+
+- feature: added slider setting: "arrows always on"
+- feature: added slider setting:  "timer bar position" 
+- feature: new animation library (transition.js) has been added
+- feature: new transitions added - premium 3D transitions and Custom Transitions.
+- feature: shuffle mode  shuffle:"on/off" to randomize the list elements at start
+- feature: API with function like next, prev, maxslide, pause,resume, show, event handling (event name : revolution.slide.changed  data.slideIndex = new slide index)
+- feature: added slide transition rotation to slide options.
+- feature: added "randomrotate" caption transition
+- feature: added slide link target - new or same window
+- feature: added 2 more responsive layers (5,6)
+- feature: Full Width video support for youtube and vimeo
+- feature: The layers are selected after add
+- feature: Added export / import slider functionality
+
+version 1.4.4
+
+- bug fix: All the image url's are saved now as relative path's
+- bug fix: Fixed bottom link to unitecms website, and some misspells
+
+version 1.4.3
+
+- done all preperations for submitting to JED
+
+version 1.4.2
+
+bug fix: moved the plugin to the media folder
+bug fix: moved the default slide image to media folder
+
+version 1.4.2
+
+- streight line with the wordpress version
+
+version 1.0  
+
+the first revolution slider release!

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+<name>Mb2 Module in Tabs</name>
+<author>Mariusz Boloz</author>
+<creationDate>August 2013</creationDate>
+<copyright>Copyright (C) 2013 Mariusz Boloz (http://marbol2.com) All rights reserved.</copyright>
+<license>GNU/GPL (http://www.gnu.org/copyleft/gpl.html)</license>
+<authorEmail>mariuszboloz@gmail.com</authorEmail>
+<authorUrl>www.marbol2.com</authorUrl>
+<version>1.1.1</version>	
+
+<description>
+<![CDATA[
+	<p style="text-align:left;">Mb2 Module in Tabs is a module for Joomla 2.5 and 3.x made by <a href="http://mb2extensions.com" target="_blank">Mariusz Boloz</a>. If You will have some question about this module please feel free to use <a href="http://mb2extensions.com/forum" target="_blank">support forum</a>.</p>
+	
+]]>
+</description>
+
+<files>
+	<filename module="mod_mb2moduleintabs">mod_mb2moduleintabs.php</filename>
+	<filename>index.html</filename>
+	<filename>helper.php</filename>
+	<folder>css</folder>
+	<folder>images</folder>
+	<folder>js</folder>
+	<folder>libs</folder>
+	<folder>tmpl</folder>
+</files>
+
+<languages folder="language">
+	<language tag="en-GB">en-GB.mod_mb2moduleintabs.ini</language>
+</languages>
+
+<config>
+<fields name="params">
+
+		
+	<fieldset name="basic" addfieldpath="/modules/mod_mb2moduleintabs/libs/fields/">	
+		
+		
+		
+		<field name="mb2_ltype" type="list" default="1" label="MOD_MB2MODULEINTABS_LAYOUT" description="">
+			<option value="1">MOD_MB2MODULEINTABS_OPT_TABS</option>
+			<option value="2">MOD_MB2MODULEINTABS_OPT_PANELS</option>	
+		</field>
+		
+		
+		
+		
+		<field name="mb2_tabs_pos" type="list" default="top" label="MOD_MB2MODULEINTABS_TABS_POS" description="">
+			<option value="top">MOD_MB2MODULEINTABS_OPT_TOP</option>
+			<option value="bottom">MOD_MB2MODULEINTABS_OPT_BOTTOM</option>
+			<option value="left">MOD_MB2MODULEINTABS_OPT_LEFT</option>
+			<option value="right">MOD_MB2MODULEINTABS_OPT_RIGHT</option>	
+		</field>
+		
+		
+		<field name="mb2_tabs_min_height" type="text" default="" label="MOD_MB2MODULEINTABS_TABS_MIN_HEIGHT" description="" />
+		<field name="mb2_tabs_list_width" type="text" default="" label="MOD_MB2MODULEINTABS_TABS_LIST_WIDTH" description="" />
+		
+		
+		
+		
+		<field name="mb2_item_active" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_ACTIVE" description="" />
+		
+		
+		
+		<field type="spacer" />
+		
+		<field name="mb2_use_modchrome" type="radio" default="1" class="btn-group" label="MOD_MB2MODULEINTABS_MODULES_CHROME" description="" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="mb2_modchrome" type="text" default="xhtml" label="MOD_MB2MODULEINTABS_MODULES_CHROME_NAME" description="" />
+		
+		
+		
+		<field type="spacer" hr="true" />
+		
+		<field type="spacer" label="MOD_MB2MODULEINTABS_ITEM1" />
+		
+		<field name="mod_itemtitle1" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_TITLE" description="" />
+		<field name="mb2_modid1" type="mb2modules" default="" label="MOD_MB2MODULEINTABS_MODULE_ID" description="" />		
+		<field name="mod_artid1" type="mb2articles" default="" label="MOD_MB2MODULEINTABS_ARTICLE_ID" />
+		
+		<field type="spacer" hr="true" />
+		<field type="spacer" label="MOD_MB2MODULEINTABS_ITEM2" />
+		
+		<field name="mod_itemtitle2" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_TITLE" description="" />
+		<field name="mb2_modid2" type="mb2modules" default="" label="MOD_MB2MODULEINTABS_MODULE_ID" description="" />
+		<field name="mod_artid2" type="mb2articles" default="" label="MOD_MB2MODULEINTABS_ARTICLE_ID" />
+		
+		
+		
+		<field type="spacer" hr="true" />
+		<field type="spacer" label="MOD_MB2MODULEINTABS_ITEM3" />
+		
+		<field name="mod_itemtitle3" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_TITLE" description="" />
+		<field name="mb2_modid3" type="mb2modules" default="" label="MOD_MB2MODULEINTABS_MODULE_ID" description="" />
+		<field name="mod_artid3" type="mb2articles" default="" label="MOD_MB2MODULEINTABS_ARTICLE_ID" />
+		
+		
+		
+		<field type="spacer" hr="true" />
+		<field type="spacer" label="MOD_MB2MODULEINTABS_ITEM4" />
+		
+		<field name="mod_itemtitle4" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_TITLE" description="" />
+		<field name="mb2_modid4" type="mb2modules" default="" label="MOD_MB2MODULEINTABS_MODULE_ID" description="" />
+		<field name="mod_artid4" type="mb2articles" default="" label="MOD_MB2MODULEINTABS_ARTICLE_ID" />
+		
+		
+		
+		<field type="spacer" hr="true" />
+		<field type="spacer" label="MOD_MB2MODULEINTABS_ITEM5" />
+		
+		<field name="mod_itemtitle5" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_TITLE" description="" />
+		<field name="mb2_modid5" type="mb2modules" default="" label="MOD_MB2MODULEINTABS_MODULE_ID" description="" />
+		<field name="mod_artid5" type="mb2articles" default="" label="MOD_MB2MODULEINTABS_ARTICLE_ID" />
+		
+		
+		
+		<field type="spacer" hr="true" />
+		<field type="spacer" label="MOD_MB2MODULEINTABS_ITEM6" />
+		
+		<field name="mod_itemtitle6" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_TITLE" description="" />
+		<field name="mb2_modid6" type="mb2modules" default="" label="MOD_MB2MODULEINTABS_MODULE_ID" description="" />
+		<field name="mod_artid6" type="mb2articles" default="" label="MOD_MB2MODULEINTABS_ARTICLE_ID" />
+		
+		
+		
+		
+		<field type="spacer" hr="true" />
+		<field type="spacer" label="MOD_MB2MODULEINTABS_ITEM7" />
+		
+		<field name="mod_itemtitle7" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_TITLE" description="" />
+		<field name="mb2_modid7" type="mb2modules" default="" label="MOD_MB2MODULEINTABS_MODULE_ID" description="" />
+		<field name="mod_artid7" type="mb2articles" default="" label="MOD_MB2MODULEINTABS_ARTICLE_ID" />
+		
+		
+		
+		
+		<field type="spacer" hr="true" />
+		<field type="spacer" label="MOD_MB2MODULEINTABS_ITEM8" />
+		
+		<field name="mod_itemtitle8" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_TITLE" description="" />
+		<field name="mb2_modid8" type="mb2modules" default="" label="MOD_MB2MODULEINTABS_MODULE_ID" description="" />
+		<field name="mod_artid8" type="mb2articles" default="" label="MOD_MB2MODULEINTABS_ARTICLE_ID" />
+		
+		
+		
+		
+		<field type="spacer" hr="true" />
+		<field type="spacer" label="MOD_MB2MODULEINTABS_ITEM9" />
+		
+		<field name="mod_itemtitle9" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_TITLE" description="" />
+		<field name="mb2_modid9" type="mb2modules" default="" label="MOD_MB2MODULEINTABS_MODULE_ID" description="" />
+		<field name="mod_artid9" type="mb2articles" default="" label="MOD_MB2MODULEINTABS_ARTICLE_ID" />
+		
+		
+		
+		
+		<field type="spacer" hr="true" />
+		<field type="spacer" label="MOD_MB2MODULEINTABS_ITEM10" />
+		
+		<field name="mod_itemtitle10" type="text" default="" label="MOD_MB2MODULEINTABS_ITEM_TITLE" description="" />
+		<field name="mb2_modid10" type="mb2modules" default="" label="MOD_MB2MODULEINTABS_MODULE_ID" description="" />
+		<field name="mod_artid10" type="mb2articles" default="" label="MOD_MB2MODULEINTABS_ARTICLE_ID" />
+		
+		<field type="spacer" />
+		<field type="spacer" />
+		<field type="spacer" />		
+	
+	</fieldset>
+	
+	<fieldset name="style" label="MOD_MB2MODULEINTABS_SECTION_STYLE">
+		
+		
+		
+		<field name="mb2_note1" type="spacer" label="MOD_MB2MODULEINTABS_STYLE_DESC" />
+		
+		<field name="mb2_normal_color" type="mb2color" default="" label="MOD_MB2MODULEINTABS_NORMAL_COLOR" description="" />
+		<field name="mb2_normal_bg_color" type="mb2color" default="" label="MOD_MB2MODULEINTABS_NORMAL_BG_COLOR" description="" />
+	
+		
+		<field name="mb2_active_color" type="mb2color" default="" label="MOD_MB2MODULEINTABS_ACTIVE_COLOR" description="" />
+		<field name="mb2_active_bg_color" type="mb2color" default="" label="MOD_MB2MODULEINTABS_ACTIVE_BG_COLOR" description="" />
+		
+		<field type="spacer" />
+		
+		<field name="mb2_custom_css" type="textarea" default="" label="MOD_MB2MODULEINTABS_CUSTOM_CSS" description="" />
+		
+		
+	
+	</fieldset>
+	
+	
+	<fieldset name="advanced">
+		
+		<field name="mb2_jquery_on" type="radio" default="1" class="btn-group" label="Jquery" description="" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="mb2_jquery_v" type="text" default="1.11.1" label="MOD_MB2MODULEINTABS_JQUERY_VERSION" description="" />
+		
+		<field type="spacer" hr="true" />
+		<!-- 
+		Default Joomla module advanced parameters
+		-->
+		
+		<field
+			name="layout"
+			type="modulelayout"
+			label="JFIELD_ALT_LAYOUT_LABEL"
+			description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+		<field
+			name="moduleclass_sfx"
+			type="text"
+			label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+			description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+		<field
+			name="cache"
+			type="list"
+			default="1"
+			label="COM_MODULES_FIELD_CACHING_LABEL"
+			description="COM_MODULES_FIELD_CACHING_DESC">
+			<option
+				value="1">JGLOBAL_USE_GLOBAL</option>
+			<option
+				value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+		</field>
+
+		<field
+			name="cache_time"
+			type="text"
+			default="900"
+			label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+			description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+		<field
+			ame="cachemode"
+			type="hidden"
+			default="itemid">
+			<option
+				value="itemid"></option>
+		</field>
+		
+	
+	</fieldset>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		</fields>
+	</config>
+</extension>

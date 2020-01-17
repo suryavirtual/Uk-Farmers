@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_smadmin/models/rules">
+	<fieldset name="details" label="COM_SMADMIN_SMADMIN_DETAILS">
+		<field name="termId" type="hidden" />
+		<field 
+			name="termName" 
+			type="text" 
+			label="COM_SMADMIN_TERM_NAME_LABEL" 
+			description="COM_SMADMIN_TERM_NAME_DESC" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+		<field name="cmpId" 
+                type="sql"
+                label="Select Supplier"
+                desc=""
+                query="SELECT mt.* FROM `jos_mt_links` as mt, jos_mt_cfvalues as cf where mt.link_id=cf.link_id and cf.value='Supplier' and mt.link_published='1' order by mt.link_name"
+                key_field="link_id" 
+                value_field="link_name"
+                />
+	</fieldset>
+	<fieldset name="sCmpDtls" label="Supplier Company Details">
+		<field 
+			name="company_address" 
+			type="textarea" 
+			label="Main Address" 
+			description="Main Address" 
+			class="inputbox"
+			required="true"
+			default="" />
+		<field 
+			name="company_phone" 
+			type="text" 
+			label="Company Phone" 
+			description="Company Phone" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+		<field 
+			name="company_fax" 
+			type="text" 
+			label="Company Fax" 
+			description="Company Fax" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+		<field 
+			name="company_email" 
+			type="text" 
+			label="Company Email" 
+			description="Company Email" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			validate="email"
+			default="" />
+	</fieldset>
+	
+	<fieldset name="mainContact" label="Main Contact">
+		<field 
+			name="contactName" 
+			type="text" 
+			label="Contact Name" 
+			description="Contact Name" 
+			class="inputbox"
+			required="true"
+			default="" />
+		<field 
+			name="contactPosition" 
+			type="text" 
+			label="Position" 
+			description="Position" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+		<field 
+			name="mobile" 
+			type="text" 
+			label="Mobile" 
+			description="Mobile" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+		<field 
+			name="contactPhone" 
+			type="text" 
+			label="Phone" 
+			description="Phone" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+		<field 
+			name="contactFax" 
+			type="text" 
+			label="Fax" 
+			description="Fax" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+		<field 
+			name="contactEmail" 
+			type="text" 
+			label="Email Address" 
+			description="Email Address" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			validate="email"
+			default="" />
+	</fieldset>
+	
+	<fieldset name="termsDtl" label="Terms Details">
+		<field 
+			name="effectiveFrom" 
+			type="calendar" 
+			label="Effective From" 
+			description="Effective From" 
+			class="inputbox"
+			required="true"
+			default="" />
+		<field 
+			name="validTo" 
+			type="calendar" 
+			label="Valid To" 
+			description="Valid To" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+		<field 
+			name="termsDetails" 
+			type="editor" 
+			label="Terms Details" 
+			description="Terms Details" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+	</fieldset>
+</form>

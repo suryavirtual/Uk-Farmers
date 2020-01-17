@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_MB2PORTFOLIO_SKILLS_TITLE_MENU" option="View">
+		<message>
+			<![CDATA[COM_MB2PORTFOLIO_SKILLS_TITLE_MENU_DESC]]>
+		</message>
+	</layout>
+	
+	
+	
+	
+	<fields name="params">
+	
+	<fieldset name="general" label="COM_MB2PORTFOLIO_OPTIONS">
+	
+	
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_HEADING_LAYOUT"/>
+		
+		<field name="skills_cols"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_COLUMN"
+             description=""> 
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>                
+                <option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>			 
+         </field>
+		 
+		 <field name="skills_item_layout"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_ITEM_LAYOUT"
+             description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_LAYOUT"> 
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>                
+                <option value="media-desc">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC</option>
+				<option value="desc-media">COM_MB2PORTFOLIO_LAYOUT_DESC_MEDIA</option>
+				<option value="media-desc-below">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC_BELOW</option>				 
+         </field>
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 <field name="skills_media_width" 
+			type="text" 
+			label="COM_MB2PORTFOLIO_MEDIA_WIDTH" 
+			description="" 
+			default="" 
+			required="false" 
+			filter="raw" 
+			maxlength="255" 
+		/>	
+		
+		
+		
+		
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_HEADING_SKILL_DETAILS" />
+		
+		
+		
+		<field name="skills_image"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_SKILL_THUMBNAIL"
+             description=""> 
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>                
+                <option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+         </field>
+		
+		
+		<field name="skills_image_width" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_THUMBNAIL_WIDTH"
+            description=""                 
+            default=""  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+			
+			
+			
+		<field name="skills_image_height" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_THUMBNAIL_HEIGHT"
+            description=""                 
+            default=""  
+            required="false" 
+            filter="string"
+            maxlength="255" />
+			
+		<!--
+		<field name="skills_image_link"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_LINK"
+             description="">  
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>               
+                <option value="0">COM_MB2PORTFOLIO_NONE</option>
+                <option value="1">COM_MB2PORTFOLIO_LINK_TO_BIG_IMAGE</option>
+				<option value="2">COM_MB2PORTFOLIO_LINK_TO_SKILL_PAGE</option>				 
+         </field>-->
+		 
+		 
+		 <field type="spacer" />
+		
+		<field name="skills_title"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_SKILL_TITLE"
+             description=""> 
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>                
+                <option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+         </field>
+		 
+		 
+		 <field name="skills_title_link"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_SKILL_TITLE_LINK"
+             description="">                 
+                 <option value="">JGLOBAL_USE_GLOBAL</option>
+				 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		 <field name="skills_title_limit" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_TITLE_TEXT_LIMIT"
+            description=""                
+            default=""  
+            required="false" 
+            filter="string"
+            maxlength="255" 
+		/>
+		
+		
+		
+		
+		 <field name="projects_count"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_PROJECTS_COUNT"
+             description="">
+			 	 <option value="">JGLOBAL_USE_GLOBAL</option>                 
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+		
+		
+		
+		<field type="spacer" />
+		 
+		 
+		 <field name="skills_desc"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_SKILL_DESC"
+             description=""> 
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>                
+                <option value="0">JNO</option>
+				<option value="1">JYES</option>				 
+         </field>
+		 
+		 <field name="skills_desc_limit" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_DESC_LIMIT"
+            description=""                
+            default=""  
+            required="false" 
+            filter="string"
+            maxlength="255" 
+		/>
+		
+		
+		
+		<field type="spacer" />
+		
+		
+		
+		
+		
+		
+		<field name="skills_read_more"
+             type="list"
+             default=""
+             label="COM_MB2PORTFOLIO_SKILL_READ_MORE_LINK"
+             description="">  
+			 	<option value="">JGLOBAL_USE_GLOBAL</option>               
+                 <option value="0">JNO</option>
+				 <option value="1">JYES</option>				 
+         </field>
+	
+	
+		
+	
+	
+	</fieldset>
+	
+	
+	</fields>
+	
+	
+	
+	
+</metadata>

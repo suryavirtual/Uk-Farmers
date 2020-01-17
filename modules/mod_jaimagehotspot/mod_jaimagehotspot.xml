@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension 
+	type="module" 
+	version="2.5" 
+	client="site"
+	method="upgrade">
+	<name>JA Image Hotspot</name>
+	<author>JoomlArt.com</author>
+	<creationDate>March 2015</creationDate>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>1.0.8</version>
+	<updateservers>
+	    <server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>
+	<description>
+		<![CDATA[
+	 	<div align="left">
+	<h2>JA Image Hotspot module for Joomla! 2.5 and Joomla! 3.3</h2>
+	<div style='font-weight: normal'>
+		<p><span style='color: #ff6600;'>
+			<strong>Overview:</strong>
+		   </span> 
+		  JA Image Hotsport module allows you to upload any static image then fill in information for a specific area that you want to point out in your image. You can add unlimited points.
+		</p>
+		<p><strong><span style="color: #ff0000;">Upgrade Method:</span><br /></strong></p>
+		<ol>
+		<li>You can install new version directly over this version. Uninstallation is not required. Backup any customized files before upgrading. OR</li>
+		<li>Use <strong><a href="http://extensions.joomla.org/extensions/core-enhancements/installers/12077" target="_blank">JA Extensions Manager</a></strong> Component for easy upgrades and rollbacks. <strong><a href="http://www.youtube.com/user/JoomlArt#p/c/BC9B0C0BFE98657E/2/mNAuJRmifG8" target="_blank">Watch Video..</a></strong></li>
+		</ol>
+		<p><span style="color: #008000;"><strong>Links:</strong></span></p>
+		<ul>
+		<li><a target="_blank" href="http://pm.joomlart.com/browse/JAECIMAHOT">Report Bug</a></li>
+		<li><a target="_blank" href="http://update.joomlart.com/">Updates &amp; Versions</a></li>
+		</ul>
+		<p>Copyright 2004 - 2014 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p>
+	</div>
+	</div>
+	 ]]>
+	</description>
+	<files>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+        <filename>index.html</filename>
+        <filename module="mod_jaimagehotspot">mod_jaimagehotspot.php</filename>
+	</files>
+    <scriptfile>mod_jaimagehotspot.install.php</scriptfile>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jaimagehotspot.ini</language>
+	</languages>
+	<config>
+		<fields 
+			name="params" 
+			addfieldpath="/modules/mod_jaimagehotspot/assets/elements">
+			<fieldset 
+				name="basic">
+				<field 
+					name="imgpath"
+					type="jamedia" 
+					preview="show"
+                    default="images/joomlart/map/worldmap.png"
+					label="JAI_IMG_PATH" 
+					description="JAI_IMG_PATH_DESC" />
+				<field 
+					name="description"
+					extpath="modules/mod_jaimagehotspot/assets/elements/jaimgextrafields"
+					type="jaimgextrafields"
+                    filter="raw"
+					label="" />
+					
+				<field type="japanel" path="/modules/mod_jaimagehotspot/assets/elements/" />
+                <field
+                        name="modules_des"
+                        type="textarea"
+                        default=""
+                        label="JAI_DESCRIPTION"
+                        description="JAI_DESCRIPTION_DESC"
+                        filter="raw"
+                        rows="5"
+                        cols="40" />
+                <field
+                        name="displaytooltips"
+                        type="radio"
+                        default="1"
+                        class="btn-group"
+                        label="JAI_DISPLAYTOOLTIPS"
+                        description="JAI_DISPLAYTOOLTIPS_DESC">
+                    <option value="1">JAI_DISPLAYTOOLTIPS_ALWAYS</option>
+                    <option value="0">JAI_DISPLAYTOOLTIPS_WHEN_HOVER</option>
+                </field>
+                <field
+                    type="text"
+                    default="2000"
+                    name="hidedelay"
+                    label="JAI_HIDE_DELAY"
+                    description="JAI_HIDE_DELAY_DESC" />
+                <field
+                        name="positionchoiseoffice"
+                        type="radio"
+                        class="btn-group"
+                        default="1"
+                        label="JAI_SHOW_POSITION_OFFICE"
+                        description="JAI_SHOW_POSITION_OFFICE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="marker_selection_txt"
+                        type="text"
+                        default="Choose Office Location"
+                        label="JAI_MARKER_SELECTION_TXT"
+                        description="JAI_MARKER_SELECTION_TXT_DESC" />
+                <field
+                        name="showchoicelocaltion"
+                        type="list"
+                        default="top-left"
+                        label="JAI_POSITION_OFFICE"
+                        description="JAI_POSITION_OFFICE_DESC">
+                    <option value="top-left">JAI_POSITION_TOP_LEFT</option>
+                    <option value="top-right">JAI_POSITION_TOP_RIGHT</option>
+                    <option value="bottom-left">JAI_POSITION_BOTTOM_LEFT</option>
+                    <option value="bottom-right">JAI_POSITION_BOTTOM_RIGHT</option>
+                    <option value="middle-left">JAI_POSITION_MIDDLE_LEFT</option>
+                    <option value="middle-right">JAI_POSITION_MIDDLE_RIGHT</option>
+                </field>
+                <field
+						name="modegroup"
+						type="japanel"
+						function="depend" hidden="true" level="3">
+					<option for="positionchoiseoffice" value="1" hideRow="true">showchoicelocaltion,marker_selection_txt</option>
+					<option for="displaytooltips" value="0" hideRow="true">hidedelay</option>
+                </field>
+			</fieldset>
+
+			<fieldset 
+				name="advanced">
+                <field name="layout" type="modulelayout"
+                       label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field
+                        name="moduleclass_sfx"
+                        type="text"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field name="cache" type="list"
+                       default="1"
+                       label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC"
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field name="cache_time" type="text"
+                       default="900"
+                       label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field
+                        name="cachemode"
+                        type="list"
+                        default="safeuri"
+                        label="Cache Mode"
+                        description="Cache Mode">
+                    <option
+                            value="safeuri">By URI</option>
+                </field>
+					
+			</fieldset>
+		</fields>
+	</config>
+</extension>

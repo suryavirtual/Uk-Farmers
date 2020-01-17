@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_smadmin/models/rules">
+	<fieldset name="details" label="File details">
+		<field name="id" type="hidden" />
+		<field name="cmpId" 
+			type="sql" 
+			label="Select Supplier" 
+			desc="" 
+			query="SELECT mt.* FROM `jos_mt_links` as mt, jos_mt_cfvalues as cf where mt.link_id=cf.link_id and cf.value='Supplier' and mt.link_published='1' order by mt.link_name" 
+			key_field="link_id" 
+			value_field="link_name">
+			<option value="">Select Supplier</option>
+		</field>
+		
+		<field name="description" 
+			type="text" 
+			label="File Description" 
+			description="About Files" 
+			size="40"  
+			class="inputbox fix-width"
+			required="true"
+			default="" />
+			
+		<field name="type"
+			type="sql" 
+			label="Select Document Type" 
+			query="select * from #__document_type order by doc_name"
+			key_field="id" 
+			value_field="doc_name"
+			required="true">
+			<option value="">Select Document Type</option>
+		</field>
+				
+		<field name="expiry" 
+			type="calendar" 
+			label="Expiry" 
+			description="Expiry" 
+			class="inputbox"
+			required="true"
+			default="" />
+			
+		<field name="order" 
+			type="media" 
+			label="Files"   
+			class="inputbox"
+			size="40"
+			default="" />
+			
+		<field name="sentNotification"
+			type="checkbox"
+			label="Sent Notification"
+			default="1" />
+			
+	</fieldset>
+</form>

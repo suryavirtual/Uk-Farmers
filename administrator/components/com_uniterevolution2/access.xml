@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_uniterevolution2">
+ <section name="component">
+  <action name="revolution2.slidersetting" title="COM_UNITEREVOLUTION2_SLIDER_CONFIG" description="COM_UNITEREVOLUTION2_SLIDER_CONFIG_DESC" />
+  <action name="revolution2.slideroperations" title="COM_UNITEREVOLUTION2_SLIDER_OPERATIONS" description="COM_UNITEREVOLUTION2_SLIDER_OPERATIONS_DESC" />
+  <action name="revolution2.slideoperations" title="COM_UNITEREVOLUTION2_SLIDE_OPERATIONS" description="COM_UNITEREVOLUTION2_SLIDE_OPERATIONS_DESC" />
+  <action name="revolution2.editslide" title="COM_UNITEREVOLUTION2_SLIDE_EDIT" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+ </section>
+
+</access>

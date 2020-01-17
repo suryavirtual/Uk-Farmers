@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_USER_MEMBER_VIEW_DEFAULT_UF_BRAND_TITLE" option="COM_USER_MEMBER_VIEW_DEFAULT_UF_BRAND_OPTION">
+		
+		<message>
+			<![CDATA[COM_USER_SUPPLIER_VIEW_DEFAULT_HOME_DESC]]>
+		</message>
+	</layout>
+</metadata>
+

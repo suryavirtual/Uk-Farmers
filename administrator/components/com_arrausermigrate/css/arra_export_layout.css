@@ -1,0 +1,94 @@
+.icon-48-generic {
+	background-image:url(../images/icons/icon-48-user.png) !important;
+}
+
+.table-group{
+	margin-bottom:10px;
+}
+
+.td-radio-checkbox{
+	padding-right: 10px;
+}
+
+hd .header_colum{
+    text-align:center;
+	border:1px solid #ff6d00; 	
+	text-align:center;
+}
+
+td .td_class{
+	min-width:100px;
+	color:#666666;
+	font-weight:bold;
+	text-align:left;
+	padding-left:5px;
+}
+
+td .td_class_2{
+	min-width:50px;	
+	color:#666666;
+	font-weight:bold;
+	text-align:left;
+	padding-left:5px;
+}
+
+td.td_export_definitions{
+	color:#666666;
+	font-weight:bold;
+	padding-bottom:5px;
+	line-height:20px;
+}
+
+td.td_export_definitions_2{
+    color:#666666;
+	font-weight:bold;
+	padding-left:5px;
+}
+
+h2{
+    color:#0B55C4;
+	padding-left:10px;
+}
+
+.icon-32-export{ 
+   background-image: url(../images/icons/joomlarra_export.png)!important; 
+}
+
+.modal{
+    padding-left:3px;
+}
+
+.additional1 td{
+	width:95px;
+}
+
+.additional1{
+	background-color:#F6F6F6;
+	color:#0B55C4;
+}
+
+.additional2,  a.visited, a.hover{
+	color:#F00 !important;
+	padding-right:3px;
+	text-decoration:none !important;
+}
+
+div.current select{
+	margin-bottom:0px !important;
+}
+
+div.current fieldset {
+	border:1px solid #CCCCCC !important;
+}
+
+#submenu a:hover, #submenu a.active,#submenu span.nolink.active {
+	color:#FF6D00 !important;
+}
+
+#submenu li a, #submenu span.nolink {
+	color:#025A8D !important;
+}
+
+div.pagetitle h2 {
+	color:#FF6D00 !important;
+}

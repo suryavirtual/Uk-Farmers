@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+<name>Mb2 Portfolio</name>
+<author>Mariusz Boloz</author>
+<creationDate>December 2012</creationDate>
+<copyright>Copyright (C) 2013 Mariusz Boloz (http://marbol2.com). All rights reserved</copyright>
+<license>GNU/GPL (http://www.gnu.org/copyleft/gpl.html)</license>
+<authorEmail>mariuszboloz@gmail.com</authorEmail>
+<authorUrl>www.marbol2.com</authorUrl>
+<version>2.3.1</version>	
+
+<description>
+	<![CDATA[				
+		<p style="text-align:left;">Mb2 Portfolio is a module for Joomla 3.x made by <a href="http://marbol2.com" target="_blank">Mariusz Boloz</a>. If You will have some question about this module please feel free to use <a href="http://support.marbol2.com" target="_blank">support forum</a>.</p>
+	]]>
+</description>
+<files>
+<filename module="mod_mb2portfolio">mod_mb2portfolio.php</filename>
+<filename>index.html</filename>
+<filename>helper.php</filename>
+<folder>js</folder>
+<folder>css</folder>
+<folder>images</folder>
+<folder>tmpl</folder>
+</files>
+
+<languages folder="language">
+	<language tag="en-GB">en-GB.mod_mb2portfolio.ini</language>
+</languages>
+
+<config>
+	<fields name="params">
+	
+		
+		<fieldset name="basic">		
+		
+		
+		
+		
+		<field type="spacer" label="MOD_MB2PORTFOLIO_HEADING_GENERAL"/>
+		
+		
+		
+		
+		
+		
+		<field name="project_limit" type="text" default="3" label="MOD_MB2PORTFOLIO_PROJECT_COUNT" description="" />
+		
+		
+		<field name="project_skill" type="sql" label="MOD_MB2PORTFOLIO_SELECT_SKILL" required="false" query="SELECT `id`, `title` FROM `#__mb2portfolio_skills` WHERE state=1" key_field="id" value_field="title">
+		 <option value="">MOD_MB2PORTFOLIO_SELECT_ALL</option>
+		 </field>
+		
+		
+		
+		
+		<field name="order_by" type="list" default="created" label="MOD_MB2PORTFOLIO_ORDER_BY" description="" >
+				<option value="id">MOD_MB2PORTFOLIO_ID</option>
+				 <option value="title">MOD_MB2PORTFOLIO_TITLE</option>
+				 <option value="ordering">MOD_MB2PORTFOLIO_ORDERING</option>
+				 <option value="created">MOD_MB2PORTFOLIO_CREATED_DATE</option>
+				 <option value="modified">MOD_MB2PORTFOLIO_MODIFIED_DATE</option>
+				 <option value="hits">JGLOBAL_HITS</option>	
+				
+		</field>
+		
+		<field name="order" type="list" default="DESC" label="MOD_MB2PORTFOLIO_ORDER" description="" >
+				<option value="ASC">MOD_MB2PORTFOLIO_ASC</option>
+				<option value="DESC">MOD_MB2PORTFOLIO_DESC</option>
+		</field>
+		
+			
+			
+			
+			
+			
+		<field type="spacer" />
+		<field type="spacer" label="MOD_MB2PORTFOLIO_HEADING_LAYOUT"/>	
+		
+		
+		
+			
+		<field name="cols" type="list" default="4" label="MOD_MB2PORTFOLIO_COLUMNS" description="">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>		
+		</field>
+		
+		
+		<field name="show_filter" type="radio" default="0" class="btn-group" label="MOD_MB2PORTFOLIO_FILTER" description="" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+		
+		<field name="carousel_on" type="radio" default="0" class="btn-group" label="MOD_MB2PORTFOLIO_CAROUSEL_ON" description="" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<!--<field name="carousel_nav_top_position" type="text" default="-22" label="MOD_MB2PORTFOLIO_CAROUSEL_NAV_TOP" description="" />
+		
+		-->
+		
+		<field name="item_margin_b" type="text" default="30" label="MOD_MB2PORTFOLIO_MARGIN_BOTTOM" description="" />
+		<field name="item_margin_lr" type="text" default="1" label="MOD_MB2PORTFOLIO_MARGIN_LR" description="" />
+		
+			
+		<field name="projects_item_layout" type="list" default="media-desc-below" label="MOD_MB2PORTFOLIO_LAYOUT" description="MOD_MB2PORTFOLIO_LAYOUT_DESC">
+			<option value="media-desc">MOD_MB2PORTFOLIO_MEDIA_DESC</option>
+			<option value="desc-media">MOD_MB2PORTFOLIO_DESC_MEDIA</option>
+			<option value="media-desc-below">MOD_MB2PORTFOLIO_MEDIA_DESC_BELOW</option>	
+			<option value="only-media">MOD_MB2PORTFOLIO_MEDIA_ONLY</option>	
+		</field>
+		<field name="projects_media_width" type="text" default="50" label="MOD_MB2PORTFOLIO_MEDIA_WIDTH" description="" />	
+			
+				
+			
+			
+			
+			
+			
+		<field type="spacer" />
+		<field type="spacer" label="MOD_MB2PORTFOLIO_HEADING_PROJECT_DETAILS"/>
+			
+			<field name="thumbnail_width" type="text" default="480" label="MOD_MB2PORTFOLIO_THUMBNAIL_WIDTH" description="" />
+			<field name="thumbnail_height" type="text" default="320" label="MOD_MB2PORTFOLIO_THUMBNAIL_HEIGHT" description="" />
+						
+				
+			<field name="lightbox" type="radio" default="1" class="btn-group" label="MOD_MB2PORTFOLIO_LIGHTBOX" description="" >
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+							
+				
+			<field name="projects_slider" type="radio" default="1" class="btn-group" label="MOD_MB2PORTFOLIO_SLIDER" description="" >
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>	
+			
+			
+			<field name="projects_item_caption" type="radio" default="0" class="btn-group" label="MOD_MB2PORTFOLIO_THUMBNAIL_CAPTION" description="" >
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+			
+			
+			
+			<field name="video_embed" type="radio" default="0" class="btn-group" label="MOD_MB2PORTFOLIO_THUMBNAIL_VIDEO_EMBED" description="MOD_MB2PORTFOLIO_THUMBNAIL_VIDEO_EMBED_DESC" >
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+			
+			
+				
+				
+				
+				
+				
+			<field type="spacer" />	
+						
+			<field name="title_limit" type="text" default="999" label="MOD_MB2PORTFOLIO_TITLE_LIMIT" description="" />
+			
+			<field name="description" type="radio" default="0" class="btn-group" label="MOD_MB2PORTFOLIO_DESCRIPTION" description="" >
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+			
+			<field name="desc_limit" type="text" default="999" label="MOD_MB2PORTFOLIO_DESC_LIMIT" description="" />	
+			
+			
+			<field type="spacer" />
+			
+			<field name="projects_date" type="list" default="created" label="MOD_MB2PORTFOLIO_DATE" description="">
+				<option value="created">MOD_MB2PORTFOLIO_CREATED_DATE</option>
+				<option value="modified">MOD_MB2PORTFOLIO_MODIFIED_DATE</option>
+				<option value="all">MOD_MB2PORTFOLIO_ALL_DATE</option>
+				<option value="none">JNONE</option>				 
+			</field>
+			
+			
+			
+			<field type="spacer" />
+			
+			
+			<field name="project_skills" type="radio" default="1" class="btn-group" label="MOD_MB2PORTFOLIO_SKILLS" description="" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+			</field>
+			
+			<field name="project_skills_link" type="radio" default="0" class="btn-group" label="MOD_MB2PORTFOLIO_SKILLS_LINK" description="" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+			</field>
+			
+			
+			
+			
+			<field type="spacer" />
+			
+			<field name="hits" type="radio" default="1" class="btn-group" label="MOD_MB2PORTFOLIO_HITS" description="" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+			</field>
+			
+			
+			<field type="spacer" />
+			
+			<field name="read_more" type="radio" default="1" class="btn-group" label="MOD_MB2PORTFOLIO_READ_MORE_FORM" description="" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+			</field>	
+			
+				
+		
+		</fieldset>	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<fieldset name="style" label="MOD_MB2PORTFOLIO_STYLE_SECTION">	
+		
+		
+		<field name="custom_color1" type="color" default="" label="MOD_MB2PORTFOLIO_CUSTOM_COLOR1" description="MOD_MB2PORTFOLIO_CUSTOM_COLOR1_DESC" />
+		
+		
+		<field name="custom_css" type="textarea" default="" cols="30" rows="10" label="MOD_MB2PORTFOLIO_CUSTOM_STYLE" description="" filter="raw" class="mb2-textarea" />
+		
+		
+		
+		
+		</fieldset>	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<fieldset name="advanced">	
+		
+			
+		
+		
+				
+		<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+		<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+	<!--	<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+			<option value="1">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+		</field>
+
+		<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+		<field name="cachemode" type="hidden" default="static">
+			<option value="static"></option>
+		</field>-->
+	
+	
+	
+	
+	
+	
+	</fieldset>
+		
+		
+				
+		
+	</fields>
+</config>
+</extension>

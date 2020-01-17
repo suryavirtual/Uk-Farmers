@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		
+      	<field name="id" type="text" default="0" label="COM_MB2PORTFOLIO_FORM_LBL_ID" readonly="true" class="readonly" description="" /> 
+		
+		<field name="title" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_TITLE" required="true" />
+		<field name="alias" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_ALIAS" />		
+		
+		<field name="state" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+        	<option value="1">JPUBLISHED</option>
+        	<option value="0">JUNPUBLISHED</option>
+    	</field>
+		<field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL"	description="JFIELD_ACCESS_DESC" size="1"  /> 
+		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"	description="">
+			<option value="*">JALL</option>
+		</field>
+        <field name="checked_out" type="hidden" filter="unset" />		
+        <field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+
+</form>

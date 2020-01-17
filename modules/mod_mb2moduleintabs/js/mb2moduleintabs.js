@@ -1,0 +1,9 @@
+/**
+ * @package		Mb2 Module in Tabs
+ * @version		1.1.1
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2014 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		GNU/GPL (http://www.gnu.org/copyleft/gpl.html)
+**/
+
+(function(e){jQuery.fn.extend({accordion:function(){return this.each(function(){function f(n,a){e(n).parent(u).siblings().removeClass(r).children(s).slideUp(o);e(n).siblings(s)[a||i](a=="show"?o:o,function(){if(e(n).siblings(s).is(":visible")){e(n).parents(u).not(t.parents()).addClass(r)}else{e(n).parent(u).removeClass(r)}if(a=="show"){e(n).parents(u).not(t.parents()).addClass(r)}e(n).parents().show()})}var t=e(this),n="accordiated",r="active",i="slideToggle",s="div",o=100,u="div.mb2moduleintabs-panel-group";if(t.data(n))return false;e.each(t.find("div.mb2moduleintabs-panel-group>div"),function(){e(this).data(n,true);e(this).hide()});e.each(t.find(".mb2moduleintabs-panel-heading"),function(){e(this).click(function(e){f(this,i);return void 0});e(this).bind("activate-node",function(){t.find(s).not(e(this).parents()).not(e(this).siblings()).slideUp(o);f(this,"slideDown")})});var a=t.find("div.iscurrent .mb2moduleintabs-panel-heading")[0];if(a){f(a,false)}})}})})(jQuery);(function(e){jQuery.fn.extend({mb2tabs:function(){return this.each(function(){var t,n,r=e(this).find("a");t=e(r.filter('[href="'+location.hash+'"]')[0]||r[0]);t.addClass("active");n=e(t[0].hash);r.not(t).each(function(){e(this.hash).hide()});e(this).on("click","a",function(r){t.removeClass("active");n.hide();t=e(this);n=e(this.hash);t.addClass("active");n.fadeIn(100);r.preventDefault()})})}})})(jQuery);jQuery(document).ready(function(e){e(".mb2moduleintabs-accordion").each(function(){e(this).accordion()});e(".mb2moduleintabs-tabs .mb2moduleintabs-tabs-list").each(function(){e(this).mb2tabs()})});

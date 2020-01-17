@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_smadmin/models/rules">
+	<fieldset name="details" label="COM_SMADMIN_SMADMIN_DETAILS">
+		<field name="id" type="hidden" />
+		
+		<field name="brandDtl" type="editor"
+			label="COM_CONTENT_FIELD_UFBRAND_LABEL" description="COM_CONTENT_FIELD_UFBRAND_DESC"
+			filter="JComponentHelper::filterText"  /> 
+			
+		<field name="pImages" type="editor"
+			label="COM_CONTENT_FIELD_PRODUCT_IMAGE_LABEL" description="COM_CONTENT_FIELD_PRODUCT_IMAGE_DESC"
+			filter="JComponentHelper::filterText" />
+			
+		<field name="pGuid" type="editor"
+			label="COM_CONTENT_FIELD_PRICE_GUIDE_LABEL" description="COM_CONTENT_FIELD_PRICE_GUIDE_DESC"
+			filter="JComponentHelper::filterText"  />
+		
+		<field name="catalogues" type="editor"
+			label="COM_CONTENT_FIELD_CATALOGUES_LABEL" description="COM_CONTENT_FIELD_CATALOGUES_DESC"
+			filter="JComponentHelper::filterText"  />
+			
+		<field name="ordering" type="text" label="Ordering" description="Ordering" size="22" default="1" />
+			
+		<field name="published" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="chzn-color-state" filter="intval" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+	</fieldset>
+</form>

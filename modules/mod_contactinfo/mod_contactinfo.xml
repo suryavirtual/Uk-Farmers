@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Contact Information Module</name>
+	<author>Edward Cupler</author>
+	<creationDate>February 2013</creationDate>
+	<copyright>(C) 2013 Digital Greys. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>ecupler@digitalgreys.com</authorEmail>
+	<authorUrl>www.digitalgreys.com</authorUrl>
+	<version>3.3</version>
+	<description>MOD_CONTACTINFO_XML_DESCRIPTION</description>
+	 <files>
+		<filename module="mod_contactinfo">mod_contactinfo.php</filename>
+		<folder>includes</folder>
+		<filename>default.jpg</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_contactinfo.ini</language>
+		<language tag="en-GB">en-GB.mod_contactinfo.sys.ini</language>
+	</languages>
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="layout_style" type="radio" default="SeperateLines" label="LAYOUT_STYLE_LBL" description="LAYOUT_STYLE_DESC">
+				<option value="SeperateLines">LAYOUT_STYLE_OPT1</option>
+				<option value="OneLine">LAYOUT_STYLE_OPT2</option>
+			</field>
+
+			<field name="separate_code" type="list" default="vert_indent" label="SEPARATE_CODE_LBL" description="SEPARATE_CODE_DESC">
+				<option value="div">SEPARATE_CODE_OPT1</option>
+				<option value="hr">SEPARATE_CODE_OPT2</option>
+				<option value="br">SEPARATE_CODE_OPT3</option>
+				<option value="none">SEPARATE_CODE_OPT4</option>
+			</field>
+
+			<field name="link_to" type="radio" default="1" label="LINK_TO_LBL" description="LINK_TO_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+		
+			<field name="link_website" type="radio" default="1" label="LINK_WEBSITE_LBL" description="LINK_WEBSITE_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+	
+			<field name="website_target" type="radio" default="0" label="WEBSITE_TARGET_LBL" description="WEBSITE_TARGET_DESC">
+				<option value="0">DGPARENT</option>
+				<option value="1">DGNEW_WINDOW</option>
+			</field>
+
+			<field name="contact_cid" type="text" default="" label="CONTACT_CID_LBL" description="CONTACT_CID_DESC" /></fieldset>
+
+			<fieldset name="image" label="FIELDSETIMAGE_LBL">
+		
+			<field name="show_image" type="radio" default="0" label="SHOW_IMAGE_LBL" description="SHOW_IMAGE_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+			<field name="link_image" type="radio" default="1" label="LINK_IMAGE_LBL" description="LINK_IMAGE_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+			<field name="thumb_size" type="list" default="100" label="THUMB_SIZE_LBL" description="THUMB_SIZE_DESC">
+				<option value="25">25_PIXELS_SQUARE_OPT</option>
+				<option value="35">35_PIXELS_SQUARE_OPT</option>
+				<option value="50">50_PIXELS_SQUARE_OPT</option>
+				<option value="75">75_PIXELS_SQUARE_OPT</option>
+				<option value="100">100_PIXELS_SQUARE_OPT</option>
+				<option value="125">125_PIXELS_SQUARE_OPT</option>
+				<option value="150">150_PIXELS_SQUARE_OPT</option>
+				<option value="175">175_PIXELS_SQUARE_OPT</option>
+				<option value="200">200_PIXELS_SQUARE_OPT</option>
+				<option value="225">225_PIXELS_SQUARE_OPT</option>
+				<option value="250">250_PIXELS_SQUARE_OPT</option>
+			</field>
+		</fieldset>
+		<fieldset name="display" label="FIELDSETDISPLAY_LBL">
+			
+		<field name="@spacer" type="spacer" default="" label="" description="" />
+			<field name="show_name" type="radio" default="0" label="SHOW_NAME_LBL" description="SHOW_NAME_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+	
+			<field name="show_alias" type="radio" default="0" label="SHOW_ALIAS_LBL" description="SHOW_ALIAS_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+	
+			<field name="con_position" type="radio" default="0" label="CON_POSITION_LBL" description="CON_POSITION_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+	
+			<field name="show_address" type="radio" default="0" label="SHOW_ADDRESS_LBL" description="SHOW_ADDRESS_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+		
+			<field name="show_suburb" type="radio" default="0" label="SHOW_SUBURB_LBL" description="SHOW_SUBURB_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+	
+			<field name="show_state" type="radio" default="0" label="SHOW_STATE_LBL" description="SHOW_STATE_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+		
+			<field name="show_postcode" type="radio" default="0" label="SHOW_POSTCODE_LBL" description="SHOW_POSTCODE_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+	
+			<field name="show_country" type="radio" default="0" label="SHOW_COUNTRY_LBL" description="SHOW_COUNTRY_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+		
+			<field name="show_telephone" type="radio" default="0" label="SHOW_TELEPHONE_LBL" description="SHOW_TELEPHONE_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+	
+			<field name="show_mobile" type="radio" default="0" label="SHOW_MOBILE_LBL" description="SHOW_MOBILE_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+	
+			</field>
+		
+			<field name="show_fax" type="radio" default="0" label="SHOW_FAX_LBL" description="SHOW_FAX_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+		
+			<field name="show_email_to" type="radio" default="0" label="SHOW_EMAIL_TO_LBL" description="SHOW_EMAIL_TO_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+		
+			<field name="email_text" type="text" default="" label="EMAIL_TEXT_LBL" description="EMAIL_TEXT_DESC">
+			</field>
+		
+			<field name="show_webpage" type="radio" default="0" label="SHOW_WEBPAGE_LBL" description="SHOW_WEBPAGE_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+
+			<field name="show_misc" type="radio" default="0" label="SHOW_MISC_LBL" description="SHOW_MISC_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+
+			<field name="show_vcard" type="radio" default="0" label="SHOW_VCARD_LBL" description="SHOW_VCARD_DESC">
+				<option value="0">DGNO</option>
+				<option value="1">DGYES</option>
+			</field>
+		</fieldset>
+		<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+	</fields>
+</config>
+</extension>

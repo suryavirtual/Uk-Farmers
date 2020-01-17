@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="COM_MTREE_MENU_TASK_NAME_MAP" option="com_mtree_map_view_default_option">
+		<message><![CDATA[COM_MTREE_MENU_TASK_MSG_MAP]]></message>
+	</layout>
+</metadata>

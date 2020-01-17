@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_smadmin/models/rules">
+	<fieldset name="details" label="">
+		<field name="id" type="hidden" />
+		<field 
+			name="subject" 
+			type="text" 
+			label="Email Subject" 
+			description="Email Subject" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+	</fieldset>
+</form>

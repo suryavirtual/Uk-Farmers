@@ -1,0 +1,8 @@
+{
+    "name": "proag/unitedfarmers",
+    "description": "The United Farmers Portal",
+    "type": "project",
+    "require": {
+        "php": ">=5.5.9"
+    }
+}

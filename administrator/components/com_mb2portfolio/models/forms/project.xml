@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+       <field name="id" type="text" default="0" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_ID" readonly="true" class="readonly" /> 
+       <field name="title" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_TITLE" required="true" /> 
+       <field name="alias" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_ALIAS" filter="safehtml" />	
+		<field name="title_link" type="radio" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECTCOM_MB2PORTFOLIO_LINK" description="COM_MB2PORTFOLIO_FORM_DESC_PROJECTCOM_MB2PORTFOLIO_LINK" class="btn-group" default="1" >
+        	<option value="0">No</option>
+         	<option value="1">Yes</option>
+        </field>
+		
+		
+       	<field name="skill_1" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_SKILL_1" query="SELECT `id`, `title` FROM `#__mb2portfolio_skills` WHERE state=1" key_field="id" value_field="title" required="true">
+		 	<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+	 	</field> 
+		
+		<field name="skill_2" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_SKILL_2" query="SELECT `id`, `title` FROM `#__mb2portfolio_skills` WHERE state=1" key_field="id" value_field="title">
+		 	<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+	 	</field> 
+		
+		
+		<field name="skill_3" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_SKILL_3" query="SELECT `id`, `title` FROM `#__mb2portfolio_skills` WHERE state=1" key_field="id" value_field="title">
+		 	<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+	 	</field> 
+		
+		
+		<field name="skill_4" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_SKILL_4" query="SELECT `id`, `title` FROM `#__mb2portfolio_skills` WHERE state=1" key_field="id" value_field="title">
+		 	<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+	 	</field> 
+		
+		
+		<field name="skill_5" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_SKILL_5" query="SELECT `id`, `title` FROM `#__mb2portfolio_skills` WHERE state=1" key_field="id" value_field="title">
+		 	<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+	 	</field>  
+
+       <field name="intro_text" 
+	   		type="editor"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_INTRO_TEXT"
+            description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_INTRO_TEXT"        
+            buttons="false" 
+            class="inputbox"
+            filter="raw" 
+		/> 
+
+       <field name="full_text" 
+	   		type="editor"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_FULL_TEXT"
+            description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_FULL_TEXT" 
+            class="inputbox"
+            filter="raw"
+			hide="readmore,pagebreak" 
+		/> 
+
+       <field name="layout" type="list"
+                
+            label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_LAYOUT"
+            description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_LAYOUT" 
+               
+            default="media-desc"
+            filter="raw">
+                <option value="media-desc">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC</option>
+                <option value="desc-media">COM_MB2PORTFOLIO_LAYOUT_DESC_MEDIA</option>
+                <option value="media-desc-below">COM_MB2PORTFOLIO_LAYOUT_MEDIA_DESC_BELOW</option>
+        </field>
+		
+		
+		
+		<field name="media_width" type="text" label="COM_MB2PORTFOLIO_MEDIA_WIDTH" description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_LAYOUT" default="60" />
+		
+		    	
+			
+     	<field name="state" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" default="1" class="chzn-color-state" >
+        	<option value="1">JPUBLISHED</option>
+        	<option value="0">JUNPUBLISHED</option>
+    	</field>
+		<field name="created" type="calendar" label="COM_MB2PORTFOLIO_FORM_LBL_CREATED_DATE" format="%Y-%m-%d %H:%M:%S" fiter="user_utc" />
+		<field name="modified" type="calendar" disabled="true" default="NOW" label="COM_MB2PORTFOLIO_FORM_LBL_MODIFIED_DATE" format="%Y-%m-%d %H:%M:%S" fiter="user_utc" />	
+		<field name="access" type="accesslevel" default="1" label="JFIELD_ACCESS_LABEL"	description="JFIELD_ACCESS_DESC" size="1" required="false" /> 
+		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"	description=""  size="1">
+			<option value="*">JALL</option>
+		</field>
+		
+		<field name="created_by" type="user" label="COM_MB2PORTFOLIO_FORM_LBL_CREATED_BY"/>
+		<field name="modified_by" type="user" label="COM_MB2PORTFOLIO_FORM_LBL_MODIFIED_BY" readonly="true" class="readonly" /> 
+		
+		
+		<field name="hits" type="text" default="0" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_HITS" readonly="true" class="readonly" /> 
+
+	
+	
+	<fields name="images">
+	
+			
+		
+		<field name="slider" type="radio" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGES_SLIDER" description="" class="btn-group" default="0">
+      		<option value="0">No</option>
+        	<option value="1">Yes</option>
+        </field>
+		
+		<field name="multiple" type="radio" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGES_MULTIPLE" description="" class="btn-group" default="0">
+      		<option value="0">No</option>
+        	<option value="1">Yes</option>
+        </field>
+		
+			
+		
+		<field name="multiple_lightbox" type="radio" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGES_MULTIPLE_LIGHTBOX" description="" class="btn-group" default="0">
+      		<option value="0">No</option>
+        	<option value="1">Yes</option>
+        </field>
+		
+		<field name="crop_images" type="radio" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGES_CROP" description="" class="btn-group" default="0">
+      		<option value="0">No</option>
+        	<option value="1">Yes</option>
+        </field>
+		
+		<field name="image_width" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGES_WIDTH" description="" default="960" />
+       	<field name="image_height" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGES_HEIGHT" description="" default="780" />	
+		
+		
+		<field name="multiple_margin" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGES_MULTIPLE_MARGIN" description="COM_MB2PORTFOLIO_FORM_DESC_MARGIN" default="0px 0px 20px 0px" />
+		
+		
+		<field type="spacer" />
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_FEATURED_IMAGE"/>
+			
+			
+		<field name="featured_image" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" />
+		<field name="featured_image_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="featured_image_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		
+		<field name="image_link" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_LINK" description="" default="1" >
+			<option value="0">COM_MB2PORTFOLIO_NONE</option>
+            <option value="1">COM_MB2PORTFOLIO_LINK_TO_BIG_IMAGE</option>
+			<option value="2">COM_MB2PORTFOLIO_LINK_TO_POST</option>
+			<option value="3">COM_MB2PORTFOLIO_LINK_TO_IMAGE_AND_POST</option>
+        </field>
+		<field name="image_on" type="radio" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_ON" description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_IMAGE_ON" class="btn-group" default="1">
+      		<option value="0">No</option>
+        	<option value="1">Yes</option>
+        </field>	
+			
+			
+		
+		<field type="spacer" />
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_1"/>			
+		<field name="image_1" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" />
+		<field name="image_1_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="image_1_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		<field type="spacer" />		
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_2"/>
+		<field name="image_2" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" /> 
+		<field name="image_2_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="image_2_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		<field type="spacer" />	
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_3"/>
+		<field name="image_3" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" /> 
+		<field name="image_3_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="image_3_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		<field type="spacer" />	
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_4"/>
+		<field name="image_4" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" /> 
+		<field name="image_4_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="image_4_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		<field type="spacer" />	
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_5"/>
+		<field name="image_5" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" /> 
+		<field name="image_5_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="image_5_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		<field type="spacer" />	
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_6"/>
+		<field name="image_6" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" /> 
+		<field name="image_6_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="image_6_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		<field type="spacer" />	
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_7"/>
+		<field name="image_7" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" />
+		<field name="image_7_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="image_7_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		<field type="spacer" />	
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_8"/>
+		<field name="image_8" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" />
+		<field name="image_8_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="image_8_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		<field type="spacer" />	
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_9"/>
+		<field name="image_9" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" /> 
+		<field name="image_9_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="image_9_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		<field type="spacer" />	
+		<field type="spacer" label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_IMAGE_10"/>
+		<field name="image_10" type="media" label="COM_MB2PORTFOLIO_FORM_LBL_URL" description="" /> 
+		<field name="image_10_alt" type="text" label="COM_MB2PORTFOLIO_FORM_LBL_ALT_TEXT" description="COM_MB2PORTFOLIO_FORM_DESC_ALT_TEXT" default="" /> 
+		<field name="image_10_caption" type="textarea" label="COM_MB2PORTFOLIO_FORM_LBL_CAPTION" description="" default="" />
+		
+		<field type="spacer" />	
+		
+		
+		
+	</fields>
+	
+	
+	
+	
+	
+	
+	<fields name="video">
+	
+	
+		<field name="video_id" type="text"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_VIDEO_ID"
+            description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_VIDEO_ID"               
+                
+            filter="raw" /> 
+	
+		<!--
+		<field name="video_embed" type="radio"                
+            label="COM_MB2PORTFOLIO_FORM_LBL_PROJECT_VIDEO_EMBED" 
+			description="COM_MB2PORTFOLIO_FORM_DESC_PROJECT_VIDEO_EMBED"              
+            class="btn-group"    
+            default="1"
+            filter="raw">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+        </field> 
+		-->
+		
+		
+	</fields>
+	
+	
+	
+	
+	
+	
+	
+	<fields name="extra_fields">
+		
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_1" type="spacer" />	
+			<field name="extra_fielda" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD" query="SELECT `id`, `title` FROM `#__mb2portfolio_extra_fields` WHERE state=1" key_field="id" value_field="title" >
+				<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+			</field>
+			<field name="extra_field_valuea" type="textarea" default="" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_VALUE" readonly="" class="" />
+			
+			
+			
+			
+			
+			
+			<field type="spacer" /> 
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_2" type="spacer" />
+			
+			<field name="extra_fieldb" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD" query="SELECT `id`, `title` FROM `#__mb2portfolio_extra_fields` WHERE state=1" key_field="id" value_field="title" >
+				<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+			</field> 
+			<field name="extra_field_valueb" type="textarea" default="" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_VALUE" readonly="" class="" />
+			
+			<field type="spacer" />
+			
+			
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_3" type="spacer" />
+			
+			<field name="extra_fieldc" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD" query="SELECT `id`, `title` FROM `#__mb2portfolio_extra_fields` WHERE state=1" key_field="id" value_field="title" >
+				<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+			</field> 
+			<field name="extra_field_valuec" type="textarea" default="" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_VALUE" readonly="" class="" />
+			
+			<field type="spacer" />
+			
+			
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_4" type="spacer" />
+			<field name="extra_fieldd" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD" query="SELECT `id`, `title` FROM `#__mb2portfolio_extra_fields` WHERE state=1" key_field="id" value_field="title" >
+				<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+			</field> 
+			<field name="extra_field_valued" type="textarea" default="" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_VALUE" readonly="" class="" />
+			
+			<field type="spacer" />
+			
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_5" type="spacer" />
+			<field name="extra_fielde" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD" query="SELECT `id`, `title` FROM `#__mb2portfolio_extra_fields` WHERE state=1" key_field="id" value_field="title" >
+				<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+			</field> 
+			<field name="extra_field_valuee" type="textarea" default="" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_VALUE" readonly="" class="" />
+			
+			<field type="spacer" />
+			
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_6" type="spacer" />
+			<field name="extra_fieldf" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD" query="SELECT `id`, `title` FROM `#__mb2portfolio_extra_fields` WHERE state=1" key_field="id" value_field="title" >
+				<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+			</field> 
+			<field name="extra_field_valuef" type="textarea" default="" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_VALUE" readonly="" class="" />
+			
+			<field type="spacer" />
+			
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_7" type="spacer" />
+			<field name="extra_fieldg" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD" query="SELECT `id`, `title` FROM `#__mb2portfolio_extra_fields` WHERE state=1" key_field="id" value_field="title" >
+				<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+			</field> 
+			<field name="extra_field_valueg" type="textarea" default="" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_VALUE" readonly="" class="" />
+			
+			<field type="spacer" />
+			
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_8" type="spacer" />
+			<field name="extra_fieldh" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD" query="SELECT `id`, `title` FROM `#__mb2portfolio_extra_fields` WHERE state=1" key_field="id" value_field="title" >
+				<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+			</field> 
+			<field name="extra_field_valueh" type="textarea" default="" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_VALUE" readonly="" class="" />
+			
+			<field type="spacer" />
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_9" type="spacer" />
+			<field name="extra_fieldi" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD" query="SELECT `id`, `title` FROM `#__mb2portfolio_extra_fields` WHERE state=1" key_field="id" value_field="title" >
+				<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+			</field> 
+			<field name="extra_field_valuei" type="textarea" default="" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_VALUE" readonly="" class="" />
+			
+			<field type="spacer" />
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_10" type="spacer" />
+			<field name="extra_fieldj" type="sql" class="inputbox" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD" query="SELECT `id`, `title` FROM `#__mb2portfolio_extra_fields` WHERE state=1" key_field="id" value_field="title" >
+				<option value="">COM_MB2PORTFOLIO_SELECT_TEXT</option>
+			</field> 
+			<field name="extra_field_valuej" type="textarea" default="" label="COM_MB2PORTFOLIO_FORM_LBL_EXTRA_FIELD_VALUE" readonly="" class="" />
+			
+		
+		
+		
+		</fields>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<fields name="links">
+		
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_LINK_1" type="spacer" />		
+			<field name="linka" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK" />
+			<field name="link_valuea" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_VALUE" />
+			<field name="link_targeta" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_TARGET" description="" class="inputbox" size="" default="_self">
+				<option value="_self">COM_MB2PORTFOLIO_OPT_SELF</option>
+				<option value="_blank">COM_MB2PORTFOLIO_OPT_BLANK</option>
+			</field>
+			<field name="link_classa" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_CLASS" description="" class="inputbox" size="" default="btn-primary">
+				<option value="btn btn-default">COM_MB2PORTFOLIO_OPT_DEFAULT</option>
+				<option value="btn btn-primary">COM_MB2PORTFOLIO_OPT_PRIMARY</option>
+				<option value="btn btn-info">COM_MB2PORTFOLIO_OPT_INFO</option>
+				<option value="btn btn-success">COM_MB2PORTFOLIO_OPT_SUCCESS</option>
+				<option value="btn btn-warning">COM_MB2PORTFOLIO_OPT_WARNING</option>
+				<option value="btn btn-danger">COM_MB2PORTFOLIO_OPT_DANGER</option>				
+				<option value="btn btn-inverse">COM_MB2PORTFOLIO_OPT_INVERSE</option>
+				<option value="btn btn-link">COM_MB2PORTFOLIO_OPT_LINK</option>				
+			</field>
+			<field name="link_icona" type="falist" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_ICON" description="COM_MB2PORTFOLIO_FORM_DESC_LINK_ICON" />
+			<field type="spacer" />
+			
+			
+			
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_LINK_2" type="spacer" />		
+			<field name="linkb" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK" />
+			<field name="link_valueb" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_VALUE" />
+			<field name="link_targetb" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_TARGET" description="" class="inputbox" size="" default="_self">
+				<option value="_self">COM_MB2PORTFOLIO_OPT_SELF</option>
+				<option value="_blank">COM_MB2PORTFOLIO_OPT_BLANK</option>
+			</field>
+			<field name="link_classb" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_CLASS" description="" class="inputbox" size="" default="btn-primary">
+				<option value="btn btn-default">COM_MB2PORTFOLIO_OPT_DEFAULT</option>
+				<option value="btn btn-primary">COM_MB2PORTFOLIO_OPT_PRIMARY</option>
+				<option value="btn btn-info">COM_MB2PORTFOLIO_OPT_INFO</option>
+				<option value="btn btn-success">COM_MB2PORTFOLIO_OPT_SUCCESS</option>
+				<option value="btn btn-warning">COM_MB2PORTFOLIO_OPT_WARNING</option>
+				<option value="btn btn-danger">COM_MB2PORTFOLIO_OPT_DANGER</option>				
+				<option value="btn btn-inverse">COM_MB2PORTFOLIO_OPT_INVERSE</option>
+				<option value="btn btn-link">COM_MB2PORTFOLIO_OPT_LINK</option>				
+			</field>
+			<field name="link_iconb" type="falist" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_ICON" description="COM_MB2PORTFOLIO_FORM_DESC_LINK_ICON" />
+			<field type="spacer" />
+			
+			
+			
+			
+			
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_LINK_3" type="spacer" />		
+			<field name="linkc" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK" />
+			<field name="link_valuec" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_VALUE" />
+			<field name="link_targetc" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_TARGET" description="" class="inputbox" size="" default="_self">
+				<option value="_self">COM_MB2PORTFOLIO_OPT_SELF</option>
+				<option value="_blank">COM_MB2PORTFOLIO_OPT_BLANK</option>
+			</field>
+			<field name="link_classc" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_CLASS" description="" class="inputbox" size="" default="btn-primary">
+				<option value="btn btn-default">COM_MB2PORTFOLIO_OPT_DEFAULT</option>
+				<option value="btn btn-primary">COM_MB2PORTFOLIO_OPT_PRIMARY</option>
+				<option value="btn btn-info">COM_MB2PORTFOLIO_OPT_INFO</option>
+				<option value="btn btn-success">COM_MB2PORTFOLIO_OPT_SUCCESS</option>
+				<option value="btn btn-warning">COM_MB2PORTFOLIO_OPT_WARNING</option>
+				<option value="btn btn-danger">COM_MB2PORTFOLIO_OPT_DANGER</option>				
+				<option value="btn btn-inverse">COM_MB2PORTFOLIO_OPT_INVERSE</option>
+				<option value="btn btn-link">COM_MB2PORTFOLIO_OPT_LINK</option>				
+			</field>
+			<field name="link_iconc" type="falist" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_ICON" description="COM_MB2PORTFOLIO_FORM_DESC_LINK_ICON" />
+			<field type="spacer" />
+			
+			
+			
+			
+			
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_LINK_4" type="spacer" />		
+			<field name="linkd" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK" />
+			<field name="link_valued" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_VALUE" />
+			<field name="link_targetd" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_TARGET" description="" class="inputbox" size="" default="_self">
+				<option value="_self">COM_MB2PORTFOLIO_OPT_SELF</option>
+				<option value="_blank">COM_MB2PORTFOLIO_OPT_BLANK</option>
+			</field>
+			<field name="link_classd" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_CLASS" description="" class="inputbox" size="" default="btn-primary">
+				<option value="btn btn-default">COM_MB2PORTFOLIO_OPT_DEFAULT</option>
+				<option value="btn btn-primary">COM_MB2PORTFOLIO_OPT_PRIMARY</option>
+				<option value="btn btn-info">COM_MB2PORTFOLIO_OPT_INFO</option>
+				<option value="btn btn-success">COM_MB2PORTFOLIO_OPT_SUCCESS</option>
+				<option value="btn btn-warning">COM_MB2PORTFOLIO_OPT_WARNING</option>
+				<option value="btn btn-danger">COM_MB2PORTFOLIO_OPT_DANGER</option>				
+				<option value="btn btn-inverse">COM_MB2PORTFOLIO_OPT_INVERSE</option>
+				<option value="btn btn-link">COM_MB2PORTFOLIO_OPT_LINK</option>				
+			</field>
+			<field name="link_icond" type="falist" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_ICON" description="COM_MB2PORTFOLIO_FORM_DESC_LINK_ICON" />
+			<field type="spacer" />
+			
+			
+			
+			
+			
+			
+			<field name="COM_MB2PORTFOLIO_FORM_LBL_LINK_5" type="spacer" />		
+			<field name="linke" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK" />
+			<field name="link_valuee" type="text" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_VALUE" />
+			<field name="link_targete" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_TARGET" description="" class="inputbox" size="" default="_self">
+				<option value="_self">COM_MB2PORTFOLIO_OPT_SELF</option>
+				<option value="_blank">COM_MB2PORTFOLIO_OPT_BLANK</option>
+			</field>
+			<field name="link_classe" type="list" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_CLASS" description="" class="inputbox" size="" default="btn-primary">
+				<option value="btn btn-default">COM_MB2PORTFOLIO_OPT_DEFAULT</option>
+				<option value="btn btn-primary">COM_MB2PORTFOLIO_OPT_PRIMARY</option>
+				<option value="btn btn-info">COM_MB2PORTFOLIO_OPT_INFO</option>
+				<option value="btn btn-success">COM_MB2PORTFOLIO_OPT_SUCCESS</option>
+				<option value="btn btn-warning">COM_MB2PORTFOLIO_OPT_WARNING</option>
+				<option value="btn btn-danger">COM_MB2PORTFOLIO_OPT_DANGER</option>				
+				<option value="btn btn-inverse">COM_MB2PORTFOLIO_OPT_INVERSE</option>
+				<option value="btn btn-link">COM_MB2PORTFOLIO_OPT_LINK</option>				
+			</field>
+			<field name="link_icone" type="falist" default="" label="COM_MB2PORTFOLIO_FORM_LBL_LINK_ICON" description="COM_MB2PORTFOLIO_FORM_DESC_LINK_ICON" />
+			<field type="spacer" />
+			
+			
+			
+		
+		
+		</fields>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<fields name="metadata">
+		
+			
+			<field name="keywords" type="textarea" label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC" default="" />
+			<field name="description" type="textarea" label="JFIELD_META_DESCRIPTION_LABEL" description="JFIELD_META_DESCRIPTION_DESC" default="" />			
+			<field name="robots" type="list" label="JFIELD_METADATA_ROBOTS_LABEL" description="JFIELD_METADATA_ROBOTS_DESC" >
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
+				<option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+				<option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+				<option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+			</field>
+			
+			<field name="author" type="text" label="JAUTHOR" description="JFIELD_METADATA_AUTHOR_DESC" size="20" />
+
+			<field name="rights" type="textarea" label="JFIELD_META_RIGHTS_LABEL" description="JFIELD_META_RIGHTS_DESC" required="false" filter="string" cols="30" rows="2" />
+			<field name="xreference" type="text" label="JFIELD_KEY_REFERENCE_LABEL" description="JFIELD_KEY_REFERENCE_DESC" class="inputbox" size="20" />
+			
+			
+			
+			
+		
+		
+		</fields>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<field name="checked_out" type="hidden" filter="unset" />		
+        <field name="checked_out_time" type="hidden" filter="unset" />
+	
+	
+	
+		</fieldset>
+
+</form>

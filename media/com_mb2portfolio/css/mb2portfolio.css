@@ -1,0 +1,2334 @@
+/**
+
+ * @package		Mb2 Portfolio
+
+ * @version		2.3.1
+
+ * @author		Mariusz Boloz (http://marbol2.com)
+
+ * @copyright	Copyright (C) 2013 Mariusz Boloz (http://marbol2.com). All rights reserved
+
+ * @license		GNU/GPL (http://www.gnu.org/copyleft/gpl.html)
+
+**/
+
+
+
+
+
+
+
+/*---------------------------------------*/
+
+/*	Portfolio container
+
+/*---------------------------------------*/
+
+.mb2-portfolio-container {
+
+	position:relative;
+
+	margin-bottom: 30px;
+
+}
+
+
+
+
+
+
+
+/* remove margin-bottom form video contaoner */
+
+.mb2-portfolio-projects .video-container {
+
+	margin-bottom:0!important;	
+
+}
+
+
+
+/* Client Testimonial */
+
+ 
+
+#content .client-testimonial-page{ 
+
+	background-color:none !important;
+
+}
+
+
+
+#content .client-testimonial-page .mb2-portfolio-item-media{ float: left; width: 350px; }
+
+
+
+
+
+
+
+/*---------------------------------------*/
+
+/*	Portfolio filter
+
+/*---------------------------------------*/
+
+.mb2-portfolio-filter-nav {
+
+	margin-bottom:20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------*/
+
+/*	Portfolio item
+
+/*---------------------------------------*/
+
+.mb2-portfolio-item {
+
+	float:left;
+
+}
+
+
+
+
+
+
+
+/* General style for portfolio item */
+
+.mb2-portfolio-item-inner {
+
+	padding: 20px;	
+
+	background: #fafafa;
+
+	border-bottom: 1px solid #C6D941;
+
+}
+
+
+
+.mb2-portfolio-item-desc p{font-size:12px;}
+
+
+
+.mb2-portfolio-read-more a{
+
+	border: none;
+
+    background: #C6D941;
+
+    box-shadow: none;
+
+
+    border-radius: 0px;
+
+    color: #777; 
+    display:block;
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    left: 8px
+
+	}
+
+	.mb2-portfolio-read-more a:hover, .mb2-portfolio-read-more a:focus{
+
+		color:#fff;
+
+		background: #b8ca3b;
+
+		transition:all 0.2s ease-in-out;
+
+		-moz-transition:all 0.2s ease-in-out;
+
+		-ms-transition:all 0.2s ease-in-out;
+
+		-o-transition:all 0.2s ease-in-out;
+
+		-webkit-transition:all 0.2s ease-in-out;
+
+		
+
+		}
+
+
+
+
+
+
+
+/* General style for layout: only media (gallery style) */
+
+.only-media .mb2-portfolio-item-inner {
+
+	padding: 0;	
+
+	border: 0;
+
+}
+
+
+
+
+
+
+
+/* General style for layout: media and desc below */
+
+.media-desc-below .mb2-portfolio-item-details-inner{
+
+	padding-top: 20px;	
+
+}
+
+
+
+
+
+
+
+/* General style for layout: left description and right media */
+
+.desc-media .mb2-portfolio-item-details-inner {
+
+	padding-right: 20px;	
+
+}
+
+
+
+
+
+
+
+/* General style for layout: left media and right description */
+
+.media-desc .mb2-portfolio-item-details-inner {
+
+	padding-left: 20px;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Project title */
+
+.mb2-portfolio-item-title {
+
+	margin: 0 0 20px 0;
+
+    line-height: normal;
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+    text-transform: uppercase;
+
+    color: #ccc;
+
+    text-align: center;
+
+}
+
+.mb2-portfolio-item-title a {
+
+	margin: 0 0 20px 0;
+
+    line-height: normal;
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+    text-transform: uppercase;
+
+    color: #777;
+
+    text-align: center;
+
+	text-decoration:none;
+
+}
+
+.mb2-portfolio-item-title a:hover {
+
+	margin: 0 0 20px 0;
+
+    line-height: normal;
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+    text-transform: uppercase;
+
+    color:#C6D941;
+
+    text-align: center;
+
+	text-decoration:none;
+
+	transition:all 0.2s ease-in-out;
+
+	-moz-transition:all 0.2s ease-in-out;
+
+	-ms-transition:all 0.2s ease-in-out;
+
+	-o-transition:all 0.2s ease-in-out;
+
+	-webkit-transition:all 0.2s ease-in-out;
+
+}
+
+
+
+
+
+
+
+
+
+/* Project meta */
+
+.mb2-portfolio-meta {
+
+	font-size:90%;
+
+	margin-top:-10px;
+
+	/*font-style:italic;*/
+
+	color:#999;
+
+	text-align:center;
+
+	border-bottom: 1px solid #ECECEC;
+
+    padding-bottom: 10px;
+
+}	
+
+
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-meta-list {
+
+	margin:0;
+
+	padding:0;
+
+}
+
+
+
+
+
+.mb2-portfolio-meta > ul > li {
+
+	list-style:none;
+
+	/*float:left;
+
+	margin:0 10px 0 0;	*/
+
+	text-align:center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-meta .mb2-portfolio-skill-list {
+
+	display:inline-block;	
+
+}
+
+
+
+
+
+
+
+.mb2-portfolio-meta > ul > li > span {
+
+	/*font-weight:bold;*/	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-skill-list {
+
+	margin:0;
+
+	padding:0;
+
+}
+
+
+
+
+
+
+
+.mb2-portfolio-skill-list li {
+
+	list-style:none;
+
+	margin:0;
+
+	display:inline;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Intro text */
+
+.mb2-portfolio-item-desc {
+
+	margin-top:10px;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Read more link */
+
+.mb2-portfolio-read-more {
+
+	margin:0;
+
+	padding-top:10px;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------*/
+
+/*	Single portfolio item
+
+/*---------------------------------------*/
+
+.mb2-portfolio-single-item-media,
+
+.mb2-portfolio-single-item-deatils	{
+
+	float:left;
+
+	margin-bottom:20px;
+
+}
+
+
+
+
+
+
+
+/* Project title */
+
+.mb2-portfolio-heading {
+
+	position:relative;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Full text */
+
+.mb2-portfolio-full-text {
+
+	margin-bottom:20px;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Social shares */
+
+.mb2-portfolio-social-shares {
+
+	padding-top: 19px;	
+
+	border-top: solid 1px #d0d0d0;
+
+}
+
+
+
+.mb2-portfolio-social-shares-list {
+
+	margin:0;
+
+	padding:0;
+
+}
+
+
+
+
+
+.mb2-portfolio-social-shares li {
+
+	list-style:none;
+
+	display:block;	
+
+	float:left;
+
+	margin:0;
+
+	padding:0;
+
+}
+
+
+
+
+
+.mb2-portfolio-social-shares li a {
+
+	display:block;
+
+	border:solid 1px #329bd1;
+
+	color:#329bd1;
+
+	font-size:18px;	
+
+	height:28px;
+
+	line-height:23px;
+
+	width:28px;
+
+	text-align:center;
+
+	margin: 1px;
+
+}
+
+
+
+
+
+
+
+.mb2-portfolio-social-shares li a:hover,
+
+.mb2-portfolio-social-shares li a:focus {
+
+	background-color:#329bd1;
+
+	color:#fff;
+
+}
+
+
+
+
+
+
+
+.mb2-portfolio-social-shares li a i {
+
+	font-size:13px;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* multiple images */
+
+.mb2-portfolio-single-item-media.multiple-images .mb2-portfolio-img {
+
+	float:left;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra fields */
+
+.mb2-portfolio-extrafields	{
+
+	margin-bottom:20px;	
+
+}
+
+
+
+
+
+.mb2-portfolio-extrafields	> h3 {
+
+	margin:0;
+
+	padding:7px 10px;
+
+	background:#f4f4f4;
+
+	font-size:100%;
+
+	border:solid 1px #d0d0d0;
+
+	border-bottom:none;	
+
+}
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-extrafields-list {
+
+	margin:0;
+
+	padding:0;
+
+	border:solid 1px #d0d0d0;
+
+	border-bottom:0;	
+
+}
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-extrafields-list li {
+
+	list-style:none;
+
+	margin:0;	
+
+	border-bottom:solid 1px #d0d0d0;
+
+	padding:7px 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-extrafields-list li span {
+
+	font-weight:bold;
+
+	display:inline-block;
+
+	min-width:100px;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Links */
+
+.mb2-portfolio-links {
+
+	margin-bottom:20px;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Meta */
+
+.mb2-portfolio-single-item-deatils .mb2-portfolio-meta {
+
+	margin-bottom:20px;
+
+	margin-top:-10px;	
+
+}
+
+
+
+
+
+.mb2-portfolio-date-title {
+
+	font-weight:bold;
+
+	display:block;
+
+	float:none;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Project navigation */
+
+.mb2-portfolio-nav	{
+
+	margin-bottom: 20px;
+
+}
+
+
+
+.mb2-portfolio-nav ul {
+
+	margin:0;
+
+	padding:0;
+
+	float: right;
+
+}
+
+
+
+.mb2-portfolio-nav ul li {
+
+	list-style:none;
+
+	margin:0;
+
+	display: block;
+
+	float: left;
+
+	margin: 0 0 0 2px;
+
+}
+
+
+
+
+
+
+
+.mb2-portfolio-nav ul li a {
+
+	display: block;
+
+	border:solid 1px #d0d0d0;
+
+	padding: 2px 10px;
+
+	text-decoration:none;
+
+	color: #999;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-nav ul li a:hover,
+
+.mb2-portfolio-nav ul li a:focus {
+
+	border-color: #329bd1;
+
+	background-color: #329bd1;
+
+	color: #fff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Skills */
+
+.mb2-portfolio-skills-title {
+
+	font-weight:bold;
+
+	display:block;
+
+	float:none;	
+
+}
+
+
+
+
+
+
+
+.mb2-portfolio-skill-item-read-more {
+
+	margin:0;
+
+	padding-top:10px;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------*/
+
+/*	Related items
+
+/*---------------------------------------*/
+
+
+
+
+
+.mb2-portfolio-related-items {
+
+	position:relative;
+
+	padding:30px 0;
+
+}
+
+
+
+
+
+
+
+
+
+/* Related item headings */
+
+.mb2-portfolio-related-items-heading .title {
+
+	font-size:18px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-related-items .mb2-portfolio-col {
+
+	margin-bottom:0!important;
+
+}
+
+
+
+
+
+/* remove margin-bottom form video contaoner */
+
+.mb2-portfolio-related-items .video-container {
+
+	margin-bottom:0!important;	
+
+}
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+/* Portfolio carousel navigation */
+
+.mb2-portfolio-related-items-content {
+
+	position:relative;
+
+}
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-carousel-nav {
+
+	display:block;
+
+	position:absolute;
+
+	z-index:10;
+
+	top:-32px;
+
+	right:1%;
+
+	height:30px;
+
+	width:100%;
+
+	text-align:right;	
+
+}
+
+
+
+
+
+.mb2-portfolio-carousel-nav .prev,
+
+.mb2-portfolio-carousel-nav .next {
+
+	display:inline-block;
+
+	height:30px;
+
+	width:30px;
+
+	margin-left: 1px;
+
+	background-color:#329bd1;
+
+	line-height:30px;
+
+	text-align: center;
+
+	font-size: 16px;
+
+	color: #fff;
+
+	opacity:0.8;
+
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-carousel-nav .pager {
+
+	display:inline-block!important;
+
+	margin:0 10px 0 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-carousel-nav .pager a {
+
+	display: inline-block;
+
+	width:10px;
+
+	height:10px;
+
+	text-indent:-200px;
+
+	overflow:hidden;
+
+	background-color:#329bd1;
+
+	margin:0 0 0 2px;
+
+	opacity:0.6;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-carousel-nav .pager a:hover,
+
+.mb2-portfolio-carousel-nav .pager a.selected {
+
+	opacity: 1;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mb2-portfolio-carousel-nav .next:hover,
+
+.mb2-portfolio-carousel-nav .prev:hover {
+
+	opacity:1;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------*/
+
+/*	Skills
+
+/*---------------------------------------*/
+
+.mb2-portfolio-skill-item {
+
+	float:left;	
+
+}
+
+
+
+
+
+
+
+.mb2-portfolio-skill-item-inner {
+
+	padding: 20px;
+
+	border: solid 1px #d0d0d0;
+
+	background: #fafafa;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------*/
+
+/*	Thumbnails
+
+/*---------------------------------------*/
+
+.mb2-portfolio-container img {
+
+	max-width:100%;
+
+	height:auto;	
+
+}
+
+
+
+
+
+
+
+
+
+/* Make portfolio thumbnail relative */
+
+.mb2-portfolio-img {
+
+	position: relative;	
+
+}
+
+
+
+
+
+
+
+
+
+/* Mark div */
+
+.mb2-portfolio-mark {
+
+	position:absolute;
+
+	bottom:0;
+
+	left:0;
+
+	margin:0;
+
+	padding:0;
+
+	opacity:0;
+
+	height:100%;
+
+	width:100%;
+
+	background:url(../images/transparent-dark-30.png);	
+
+}
+
+
+
+
+
+
+
+
+
+/* Show thumbanil mark div on hover */
+
+.mb2-portfolio-img:hover .mb2-portfolio-mark,
+
+.mb2-portfolio-img:focus .mb2-portfolio-mark {
+
+	opacity:1;	
+
+}
+
+
+
+
+
+
+
+/* Style for thumbnail links */
+
+.mb2-portfolio-mark a {
+
+	display:block;
+
+	float:left;
+
+	margin:0 1px 0 0;
+
+	width:36px;
+
+	height:36px;
+
+	line-height:36px;
+
+	text-align:center;
+
+	background-color:#C6D941;
+
+	color:#fff;
+
+	transition-duration: 0.1s;
+
+	transition-timing-function: linear;
+
+	transition-delay: 0.1s;
+
+	-webkit-transition-duration: 0.1s;
+
+	-webkit-transition-timing-function: linear;
+
+	-webkit-transition-delay: 0.1s;
+
+	opacity:0.85;
+
+	font-size:14px;
+
+	border-radius:50%;
+
+}
+
+	
+
+	
+
+	
+
+
+
+.mb2-portfolio-mark a:hover,
+
+.mb2-portfolio-mark a:focus	{
+
+	opacity:1;
+
+	color:#fff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* links div in mb2-portfolio-mark */
+
+.mb2-portfolio-mark .link {
+
+	width:37px;
+
+	height:36px;
+
+	position:absolute;
+
+	left:50%;
+
+	margin-left:-18px;
+
+	top:50%;
+
+	margin-top:-18px;
+
+}
+
+							
+
+							
+
+							
+
+.mb2-portfolio-mark .links {
+
+	width:74px;
+
+	height:36px;
+
+	position:absolute;
+
+	left:50%;
+
+	margin-left:-37px;
+
+	top:50%;
+
+	margin-top:-18px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Image caption */
+
+.mb2-portfolio-img-caption {
+
+	font-size:90%;
+
+	font-style:italic;
+
+	position:absolute;
+
+	margin:0;
+
+	bottom:5px;
+
+	right:0;
+
+	background-color:#329bd1;
+
+	color:#fff;
+
+	padding:2px 8px 4px 8px;
+
+	opacity:0.85;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------*/
+
+/*	Bootstrap carousel
+
+/*-------------------------------*/
+
+.mb2portfolio-bs-carousel {
+
+	margin-bottom:0!important;
+
+}
+
+
+
+
+
+/* Direct navigation */
+
+.mb2portfolio-bs-carousel .carousel-control {
+
+    background:url(../images/transparent-dark-30.png);
+
+    -moz-border-radius:0;
+
+	-webkit-border-radius:0;
+
+	-ms-border-radius:0;
+
+	-o-border-radius:0;
+
+	border-radius:0;
+
+	border: 0;
+
+    color:#fff;
+
+    font-size:18px;
+
+    height:33px;    
+
+    line-height:33px;
+
+	text-align:center;
+
+    margin-top:-17px;
+
+	opacity: 1;
+
+    position:absolute;
+
+    top:50%;
+
+    width:33px;
+
+}
+
+
+
+
+
+.mb2portfolio-bs-carousel .carousel-control.left {
+
+	left:8px;
+
+}
+
+
+
+.mb2portfolio-bs-carousel .carousel-control.right {	
+
+	right:8px;	
+
+}
+
+
+
+.mb2portfolio-bs-carousel .carousel-control:hover{
+
+	background:url(../images/transparent-dark-60.png);
+
+}
+
+
+
+
+
+
+
+
+
+/* Indicators */
+
+.mb2portfolio-bs-carousel .carousel-indicators {
+
+    position:absolute;
+
+	width:100%;
+
+	margin:0;
+
+	padding:0;
+
+	top:10px;
+
+	right:0;
+
+	left:0;
+
+	height:10px;
+
+	text-align:center;
+
+}
+
+
+
+
+
+
+
+
+
+.mb2portfolio-bs-carousel .carousel-indicators li {
+
+    background:url(../images/transparent-dark-30.png);
+
+    -moz-border-radius:999px;
+
+	-webkit-border-radius:999px;
+
+	-ms-border-radius:999px;
+
+	-o-border-radius:999px;
+
+	border-radius:999px;
+
+    display: inline-block;
+
+	float:none;
+
+    height:10px;
+
+    margin:0 1px;
+
+    text-indent:-999px;
+
+    width:10px;
+
+	border:0;
+
+}
+
+
+
+
+
+
+
+
+
+.mb2portfolio-bs-carousel .carousel-indicators li.active {
+
+	background:url(../images/transparent-dark-80.png);	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Carousel caption */
+
+.mb2portfolio-bs-carousel .carousel-caption {
+
+	position:absolute;
+
+	width:96%;
+
+    background:url(../images/transparent-dark-60.png);
+
+    bottom:0;
+
+    left:0;
+
+	right:0;
+
+    padding-top:20px;
+
+	padding-bottom:20px;
+
+	padding-left:2%;
+
+	padding-right:2%;
+
+    margin:0; 
+
+	color:#fff;
+
+	text-align:center;
+
+	text-shadow:none; 
+
+}
+
+
+
+
+
+.mb2portfolio-bs-carousel .carousel-caption h4 {
+
+	color:#fff;
+
+	margin:0!important;
+
+	font-size: 110%;	
+
+}
+
+
+
+
+
+.mb2portfolio-bs-carousel .carousel-caption p {
+
+	margin:0;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.video-container {
+
+    height: 0;
+
+    overflow: hidden;
+
+    padding-bottom: 56.25%;
+
+    padding-top: 25px;
+
+    position: relative;
+
+    z-index: 0;
+
+}
+
+.video-container iframe,
+
+.video-container object,
+
+.video-container embed{
+
+    height: 100%;
+
+    left: 0;
+
+    max-width: 100%;
+
+    position: absolute;
+
+    top: 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* projects separator */
+
+.mb2-portfolio-separator {
+
+	visibility:hidden;
+
+	clear:both;
+
+	width:100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* fixed problem with hover image in firefox */
+
+.mb2-portfolio-img img {
+
+	box-shadow: #000 0em 0em 0em;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* set max-width for images */
+
+.mb2portfolio-container img {
+
+	max-width:100%;
+
+}
+
+
+
+.mb2-portfolio-container .mb2-portfolio-media{
+
+	border:3px solid #fff;
+
+	outline:1px solid #ccc;
+
+	}
+
+
+
+
+
+.client-testimonial-page .mb2-portfolio-item-media{ border: 0 none; background: none; padding: 0; outline: 0 none; max-width: 200px; }
+
+.client-testimonial-page .mb2-portfolio-img{ max-width: 100px; }
+
+.mb2-portfolio-container .mb2-portfolio-details {  float: none!important;  margin-left: 200px;  width: auto!important; }
+
+
+
+.client-testimonial-page .mb2-portfolio-item-title{ margin-bottom: 10px!important;  }
+
+.client-testimonial-page .mb2-portfolio-meta { display: block; margin: 0 0 10px; padding-bottom: 9px; }
+
+
+
+.client-testimonial-page.mb2-portfolio-meta > ul > li{ text-align: left;  } 
+
+.client-testimonial-page .mb2-portfolio-item-desc{ margin-top: 0;  }
+
+
+
+.client-testimonial-page .mb2-portfolio-item-desc p{ text-align: left; }
+
+.client-testimonial-page .mb2-portfolio-item-desc p:last-child{ margin-bottom: 5px; }
+
+/*.client-testimonial-page .mb2-portfolio-read-more{ display: none;  }*/
+
+.client-testimonial-page .mb2-portfolio-item-inner { border: 1px solid #ddd; box-shadow: 0 0 0 7px #fff inset; margin-bottom: 20px; padding: 7px !important;min-height: 470px; position: relative; }
+
+.client-testimonial-page {  background: none !important; }
+
+.client-testimonial-page .mb2-portfolio-projects{ padding: 20px; background: #fafafa!important;}
+
+.client-testimonial-page .mb2-portfolio-meta.clearfix:before,.client-testimonial-page .mb2-portfolio-meta.clearfix:after{ display: none; }
+
+
+
+
+
+
+
+/* Resposive style for tablet */
+
+@media only screen and (max-width:768px){
+
+
+
+	
+
+	/* Set width 100% for portfolio elements */
+
+	.mb2-portfolio-single-item-media, 		/* Single item media */
+
+	.mb2-portfolio-single-item-deatils { 	/* Portfolio item details */
+
+		width: 100%!important;
+
+		margin-left: 0!important;
+
+		margin-right: 0!important;	
+
+	}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px){
+
+
+
+.mb2-portfolio-container .mb2-portfolio-details { clear: both; float: none !important; margin-left: 0; margin-top: 14px; width: auto !important; }
+
+.client-testimonial-page .mb2-portfolio-item-inner{ padding: 15px!important; }
+
+#content .client-testimonial-page .mb2-portfolio-item-media { float: none; text-align: center; width: auto; max-width: none; }
+
+.mb2-portfolio-img{ margin: 0 auto; }
+
+.client-testimonial-page .mb2-portfolio-item-desc p { text-align: center; }
+
+
+
+
+
+}
+
+
+
+
+
+/* Responsive style for mobile */
+
+@media only screen and (max-width:568px){	
+
+	
+
+	
+
+	
+
+	/* Set width 100% for portfolio elements */
+
+	.no-carousel .mb2-portfolio-col, 		/* Portfolio items */
+
+	.mb2-portfolio-media, 					/* Portfolio item media */
+
+	.mb2-portfolio-details { 				/* Portfolio item details */
+
+		width: 100%!important;
+
+		margin-left: 0!important;
+
+		margin-right: 0!important;	
+
+	}
+
+	
+
+	
+
+	
+
+	/* Remove padding left and right from project details (layout: media-desc and desc-media) and add padding top */
+
+	.desc-media .mb2-portfolio-item-details-inner,
+
+	.media-desc .mb2-portfolio-item-details-inner {
+
+		padding-left: 0;
+
+		padding-right: 0;
+
+		padding-top: 20px;	
+
+	}
+
+	
+
+	
+
+	
+
+	
+
+	/* Add margin bottom for all portfolio items */
+
+	.mb2-portfolio-container.no-carousel .mb2-portfolio-col,
+
+	.mb2-portfolio-related-items .mb2-portfolio-col {	
+
+		margin-bottom: 30px!important;
+
+	}	
+
+	
+
+	
+
+	
+
+	
+
+	/* Carousel navigation */
+
+	.mb2-portfolio-carousel-nav {
+
+		position:static;
+
+		z-index:10;
+
+		top:0;
+
+		right:0;
+
+		height:auto;
+
+		text-align:center;
+
+		margin: 20px 0;	
+
+	}
+
+	
+
+	.mb2-portfolio-carousel-nav .prev,
+
+	.mb2-portfolio-carousel-nav .next {
+
+		opacity:1;	
+
+	}
+
+	
+
+	.mb2-portfolio-carousel-nav .pager {
+
+		display:none!important;
+
+	}	
+
+	
+
+	
+
+	
+
+	
+
+	/* Hide tooltip */
+
+	.tooltip {
+
+		display: none!important;	
+
+	}
+
+.client-testimonial-page .mb2-portfolio-meta{ display:  block; margin-bottom: 10px;}
+
+.mb2-portfolio-meta .mb2-portfolio-skill-list{ text-align: left; }
+
+}
+
+ 
+
+/*******deepak*****/
+
+#content .client-testimonial-page {
+
+    background-color: #999;
+
+    float: left;
+
+    margin: 1%;
+
+    width: 23%;
+
+}
+
+.client-testimonial-page .mb2-portfolio-item-title {
+
+    float: left;
+
+    margin: 10px;
+
+    width: 100%;
+
+}
+
+
+
+.mb2-portfolio-container .mb2-portfolio-details {
+
+
+
+    margin-left: 0 !important;
+
+}
+
+
+
+.client-testimonial-page .mb2-portfolio-img {
+
+    margin: 0 auto !important;
+
+}
+
+
+
+.client-testimonial-page .mb2-portfolio-item-media {
+
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+
+    border: 0 none;
+
+    max-width: none;
+
+    outline: 0 none;
+
+    padding: 0;
+
+}
+
+
+
+
+
+#content .client-testimonial-page .mb2-portfolio-item-media {
+
+    width: 100%;
+
+}
+
+.mb2-portfolio-container .mb2-portfolio-single-item-media
+{
+	width: 25% !important;
+}
+
+/*******End deepak*****/

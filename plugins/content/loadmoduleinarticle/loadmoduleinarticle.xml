@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content" method="upgrade">
+	<name>Content - Load Module in Article</name>
+	<author>Carsten Engel</author>
+	<creationDate>januari 2015</creationDate>
+	<copyright>Copyright (C) 2008-2015 Carsten Engel, pages-and-items. All rights reserved.</copyright>
+	<license>GNU</license>
+	<authorEmail>-</authorEmail>
+	<authorUrl>www.pages-and-items.com</authorUrl>
+	<version>3.1.0</version>
+	<description>
+	   <![CDATA[ Plugin to display a module into an article. Placing the same module more then once on a page might result in conflicts. Dont forget to ENABLE this plugin in the plugin-manager. Syntax in editor: {module [63]} where 63 is the id of the module. You can overrule the default style like this: {module [63|rounded]}. Options are 'none', 'xhtml' (wrapped by a div) and 'rounded' (wrapped by multiple divs). Check the <a href="http://www.pages-and-items.com/extensions/load-module-into-article/faqs" target="_blank">FAQs</a>. Check the <a href="http://www.pages-and-items.com/forum/33-plugin-module-in-article" target="_blank">forum</a>.
+	   ]]>
+	</description> 
+	<files>		
+		<filename plugin="loadmoduleinarticle">loadmoduleinarticle.php</filename>	
+		<filename plugin="loadmoduleinarticle">index.html</filename>		
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="style" type="list"
+					default="none"
+					description="Default style, unless specified/overruled in editor code, see example code in plugin description."
+					label="Default style">					
+					<option value="xhtml">xhtml (wrapped by divs)</option>
+					<option value="rounded">rounded (wrapped by multiple Divs)</option>
+					<option value="none">none (raw output)</option>
+				</field>
+				<field name="displayunpublished" type="radio"
+					default="1"
+					description="Display the module also when the module is unpublished."
+					label="Display module when unpublished">					
+					<option value="1">Yes</option>
+					<option value="0">No</option>					
+				</field>
+				<field name="tags" type="radio"
+					default="0"
+					description="Show tags when the module is unpublished and when 'display module when unpublished' is set to 'no'. This is just for development so you can see where the tag is in the content."
+					label="Show code when unpublished">					
+					<option value="1">Yes</option>
+					<option value="0">No</option>					
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="plg_loadmoduleinarticle"><![CDATA[http://www.pages-and-items.com/updateserver.php?ext=loadmoduleinarticle&]]></server>
+	</updateservers>	
+</extension>

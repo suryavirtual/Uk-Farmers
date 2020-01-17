@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_smadmin/models/rules" enctype="multipart/form-data">
+	<fieldset name="details" >
+		<field name="termId" type="hidden" />
+		
+		<field name="supplierUserId" 
+                type="sql"
+                label="Select Supplier"
+                query="SELECT mt.* FROM `jos_mt_links` as mt, jos_mt_cfvalues as cf where mt.link_id=cf.link_id and cf.value='Supplier' and mt.link_published='1' order by mt.link_name"
+                key_field="link_id" 
+                value_field="link_name"
+                required="true"
+                default="Select Supplier">
+
+                <option value="">Select Supplier</option>
+        </field>
+                <field 
+			name="contactName" 
+			type="list"
+			label="contact Name" 
+			description="" 
+			class="inputbox"
+			default="" />
+           
+			<field 
+			name="effectiveFrom" 
+			type="calendar" 
+			label="Terms Start" 
+			description="" 
+			class="inputbox"
+			required="true"
+			default="" />
+			<field name="sentNotification"
+			type="checkbox"
+			label="Sent Notification"
+			default="1" />
+			
+	
+	</fieldset>
+	<fieldset name="mainContact" >
+		 <field 
+			name="termName" 
+			type="text" 
+			label="COM_SMADMIN_TERM_NAME_LABEL" 
+			description="" 
+			size="50"  
+			class="inputbox"
+			required="true"
+			desc=""
+			default="" />
+		
+		<field 
+			name="contactEmail" 
+			type="text" 
+			label="Contact Email " 
+			description="" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			validate="email"
+			default="" />
+			<field 
+			name="validTo" 
+			type="calendar" 
+			label="Terms Expire" 
+			description="" 
+			size="40"  
+			class="inputbox"
+			required="true"
+			default="" />
+			<field 
+			name="termsDetails" 
+			type="media" 
+			label="Files"   
+			class="inputbox"
+			size="40"
+			default="" />
+			
+
+	</fieldset>
+	
+</form>

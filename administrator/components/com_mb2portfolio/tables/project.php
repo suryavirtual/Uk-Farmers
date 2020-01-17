@@ -1,0 +1,346 @@
+<?php
+
+/**
+ * @package		Mb2 Portfolio
+ * @version		2.3.1
+ * @author		Mariusz Boloz (http://marbol2.com)
+ * @copyright	Copyright (C) 2013 Mariusz Boloz (http://marbol2.com). All rights reserved
+ * @license		GNU/GPL (http://www.gnu.org/copyleft/gpl.html)
+**/
+// No direct access
+defined('_JEXEC') or die;
+
+/**
+ * project Table class
+ */
+class Mb2portfolioTableproject extends JTable {
+
+    /**
+     * Constructor
+     *
+     * @param JDatabase A database connector object
+     */
+    public function __construct(&$db) {
+        parent::__construct('#__mb2portfolio', 'id', $db);
+    }
+
+    /**
+     * Overloaded bind function to pre-process the params.
+     *
+     * @param	array		Named array
+     * @return	null|string	null is operation was satisfactory, otherwise returns an error
+     * @see		JTable:bind
+     * @since	1.5
+     */
+    public function bind($array, $ignore = '') {
+
+        
+		if(!JFactory::getUser()->authorise('core.edit.state','com_mb2portfolio') && $array['state'] == 1){
+			$array['state'] = 0;
+		}
+
+		//Support for multiple or not foreign key field: skill_1
+			if(isset($array['skill_1'])):
+				if(is_array($array['skill_1'])){
+					$array['skill_1'] = implode(',',$array['skill_1']);
+				}
+				else if(strrpos($array['skill_1'], ',') != false){
+					$array['skill_1'] = explode(',',$array['skill_1']);
+				}
+			endif;
+
+		//Support for multiple or not foreign key field: skill_2
+			if(isset($array['skill_2'])):
+				if(is_array($array['skill_2'])){
+					$array['skill_2'] = implode(',',$array['skill_2']);
+				}
+				else if(strrpos($array['skill_2'], ',') != false){
+					$array['skill_2'] = explode(',',$array['skill_2']);
+				}
+			endif;
+
+		//Support for multiple or not foreign key field: skill_3
+			if(isset($array['skill_3'])):
+				if(is_array($array['skill_3'])){
+					$array['skill_3'] = implode(',',$array['skill_3']);
+				}
+				else if(strrpos($array['skill_3'], ',') != false){
+					$array['skill_3'] = explode(',',$array['skill_3']);
+				}
+			endif;
+
+		//Support for multiple or not foreign key field: skill_4
+			if(isset($array['skill_4'])):
+				if(is_array($array['skill_4'])){
+					$array['skill_4'] = implode(',',$array['skill_4']);
+				}
+				else if(strrpos($array['skill_4'], ',') != false){
+					$array['skill_4'] = explode(',',$array['skill_4']);
+				}
+			endif;
+
+		//Support for multiple or not foreign key field: skill_5
+			if(isset($array['skill_5'])):
+				if(is_array($array['skill_5'])){
+					$array['skill_5'] = implode(',',$array['skill_5']);
+				}
+				else if(strrpos($array['skill_5'], ',') != false){
+					$array['skill_5'] = explode(',',$array['skill_5']);
+				}
+			endif;
+		if(!isset($array['created_by']) || $array['created_by'] == 0){
+			$array['created_by'] = JFactory::getUser()->id;
+		}
+
+        if (isset($array['params']) && is_array($array['params'])) {
+            $registry = new JRegistry();
+            $registry->loadArray($array['params']);
+            $array['params'] = (string) $registry;
+        }
+
+        if (isset($array['metadata']) && is_array($array['metadata'])) {
+            $registry = new JRegistry();
+            $registry->loadArray($array['metadata']);
+            $array['metadata'] = (string) $registry;
+        }
+        if(!JFactory::getUser()->authorise('core.admin', 'com_mb2portfolio.project.' . $array['id'])){
+            $actions = JFactory::getACL()->getActions('com_mb2portfolio','project');
+            $default_actions = JFactory::getACL()->getAssetRules('com_mb2portfolio.project.'.$array['id'])->getData();
+            $array_jaccess = array();
+            foreach($actions as $action){
+                $array_jaccess[$action->name] = $default_actions[$action->name];
+            }
+            $array['rules'] = $this->JAccessRulestoArray($array_jaccess);
+        }
+        //Bind the rules for ACL where supported.
+		if (isset($array['rules']) && is_array($array['rules'])) {
+			$this->setRules($array['rules']);
+		}
+
+        return parent::bind($array, $ignore);
+    }
+    
+    /**
+     * This function convert an array of JAccessRule objects into an rules array.
+     * @param type $jaccessrules an arrao of JAccessRule objects.
+     */
+    private function JAccessRulestoArray($jaccessrules){
+        $rules = array();
+        foreach($jaccessrules as $action => $jaccess){
+            $actions = array();
+            foreach($jaccess->getData() as $group => $allow){
+                $actions[$group] = ((bool)$allow);
+            }
+            $rules[$action] = $actions;
+        }
+        return $rules;
+    }
+
+    /**
+     * Overloaded check function
+     */
+    public function check() {
+
+        //If there is an ordering column and this is a new row then get the next ordering value
+        if (property_exists($this, 'ordering') && $this->id == 0) {
+            $this->ordering = self::getNextOrder();
+        }
+		
+		
+		//generate project alias
+		$this->alias = $this->generateAlias();		
+		
+		
+		//check created and modufed date and created and modifed user
+		JLoader::import('joomla.utilities.date');
+		$user = JFactory::getUser();
+		$date = new JDate();
+		
+		$app = JFactory::getApplication();
+		
+		//$app->input->get('task') == 'save2copy'
+		
+			
+		if(empty($this->id))
+		{
+			$this->created_by = $user->id;
+			if(empty($this->created)) $this->created = $date->toSql();			
+			
+		}
+		else
+		{
+			$this->modified_by = $user->id;
+			$this->modified = $date->toSql();
+		}
+		
+		
+		
+		if($app->input->get('task') == 'save2copy'){
+			$this->created = $date->toSql();
+			$this->hits = '';
+			$this->state = 0;		
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+        return parent::check();
+    }
+	
+	
+	
+	/**
+	 * Generate a valid alias from title / date.
+	 * Remains public to be able to check for duplicated alias before saving
+	 *
+	 * @return  string
+	 */
+	public function generateAlias()
+	{
+		if (empty($this->alias))
+		{
+			$this->alias = $this->title;
+		}
+
+		$this->alias = JApplication::stringURLSafe($this->alias);
+
+		
+		
+		
+		$db = JFactory::getDBO();
+		$db->setQuery("SELECT id FROM #__mb2portfolio WHERE alias = ".$db->quote($this->alias)." AND id != ".(int)$this->id);
+		$result = count($db->loadObjectList());
+		
+		if ($result>=1)
+		{
+			//$this->alias .= '-'.uniqid();
+			$application = JFactory::getApplication();
+			$application->enqueueMessage(JText::_('COM_MB2PORTFOLIO_DUPLICATE_TITLE_ALIAS_DETECTED'), 'warning');
+		}		
+		
+
+		return $this->alias;
+	}
+	
+	
+	
+	
+	
+	
+
+    /**
+     * Method to set the publishing state for a row or list of rows in the database
+     * table.  The method respects checked out rows by other users and will attempt
+     * to checkin rows that it can after adjustments are made.
+     *
+     * @param    mixed    An optional array of primary key values to update.  If not
+     *                    set the instance property value is used.
+     * @param    integer The publishing state. eg. [0 = unpublished, 1 = published]
+     * @param    integer The user id of the user performing the operation.
+     * @return    boolean    True on success.
+     * @since    1.0.4
+     */
+    public function publish($pks = null, $state = 1, $userId = 0) {
+        // Initialise variables.
+        $k = $this->_tbl_key;
+
+        // Sanitize input.
+        JArrayHelper::toInteger($pks);
+        $userId = (int) $userId;
+        $state = (int) $state;
+
+        // If there are no primary keys set check to see if the instance key is set.
+        if (empty($pks)) {
+            if ($this->$k) {
+                $pks = array($this->$k);
+            }
+            // Nothing to set publishing state on, return false.
+            else {
+                $this->setError(JText::_('JLIB_DATABASE_ERROR_NO_ROWS_SELECTED'));
+                return false;
+            }
+        }
+
+        // Build the WHERE clause for the primary keys.
+        $where = $k . '=' . implode(' OR ' . $k . '=', $pks);
+
+        // Determine if there is checkin support for the table.
+        if (!property_exists($this, 'checked_out') || !property_exists($this, 'checked_out_time')) {
+            $checkin = '';
+        } else {
+            $checkin = ' AND (checked_out = 0 OR checked_out = ' . (int) $userId . ')';
+        }
+
+        // Update the publishing state for rows with the given primary keys.
+        $this->_db->setQuery(
+                'UPDATE `' . $this->_tbl . '`' .
+                ' SET `state` = ' . (int) $state .
+                ' WHERE (' . $where . ')' .
+                $checkin
+        );
+        $this->_db->query();
+
+        // Check for a database error.
+        if ($this->_db->getErrorNum()) {
+            $this->setError($this->_db->getErrorMsg());
+            return false;
+        }
+
+        // If checkin is supported and all rows were adjusted, check them in.
+        if ($checkin && (count($pks) == $this->_db->getAffectedRows())) {
+            // Checkin each row.
+            foreach ($pks as $pk) {
+                $this->checkin($pk);
+            }
+        }
+
+        // If the JTable instance value is in the list of primary keys that were set, set the instance.
+        if (in_array($this->$k, $pks)) {
+            $this->state = $state;
+        }
+
+        $this->setError('');
+        return true;
+    }
+    
+    /**
+      * Define a namespaced asset name for inclusion in the #__assets table
+      * @return string The asset name 
+      *
+      * @see JTable::_getAssetName 
+    */
+    protected function _getAssetName() {
+        $k = $this->_tbl_key;
+        return 'com_mb2portfolio.project.' . (int) $this->$k;
+    }
+ 
+    /**
+      * Returns the parrent asset's id. If you have a tree structure, retrieve the parent's id using the external key field
+      *
+      * @see JTable::_getAssetParentId 
+   */
+	
+	
+    protected function _getAssetParentId(JTable $table = null, $id = null){
+        // We will retrieve the parent-asset from the Asset-table
+        $assetParent = JTable::getInstance('Asset');
+        // Default: if no asset-parent can be found we take the global asset
+        $assetParentId = $assetParent->getRootId();
+        // The item has the component as asset-parent
+        $assetParent->loadByName('com_mb2portfolio');
+        // Return the found asset-parent-id
+        if ($assetParent->id){
+            $assetParentId=$assetParent->id;
+        }
+        return $assetParentId;
+    }
+    
+    
+
+}

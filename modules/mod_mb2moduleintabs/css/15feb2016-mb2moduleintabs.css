@@ -1,0 +1,381 @@
+/**
+ * @package		Mb2 Module in Tabs
+ * @version		1.1.1
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2014 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		GNU/GPL (http://www.gnu.org/copyleft/gpl.html)
+**/
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Accordion style
+/*--------------------------------------------------------------*/
+
+.mb2moduleintabs-accordion {
+	width: 100%;
+}
+ 
+ 
+/* Accordion panel */
+
+.mb2moduleintabs-panel-group {
+	    margin: 15px 0 15px 0;
+}
+
+
+ 
+
+/* Accordion item heading - normal state */
+ 
+.mb2moduleintabs-panel-group .mb2moduleintabs-panel-heading {
+	cursor: pointer;
+    font-size: 12px;
+    color: #B1B1B1;
+    /* background-color: #dadbdc; */
+    font-weight: normal;
+    margin: 0;
+    padding: 6px 15px;
+    border: 1px solid #E6E5E5;
+    text-transform: uppercase;
+	transform: skew(-14deg,0);
+	
+}
+
+
+/* Accordion item - active state */
+
+.mb2moduleintabs-panel-group.active .mb2moduleintabs-panel-heading {
+	background-color: #C6D941;
+    color: #fff;
+	transform: skew(-14deg,0);
+	transition:all 0.2s ease-in;
+	-webkit-transition:all 0.2s ease-in;
+	-moz-transition:all 0.2s ease-in;
+	-o-transition:all 0.2s ease-in;
+	-ms-transition:all 0.2s ease-in;
+}
+
+
+
+ 
+/* Accordion item panel content */
+ 
+.mb2moduleintabs-panel-content {  
+	padding: 0px 15px;
+    /* background-color: #fafbfc; */
+    border-left: solid 2px #ddd;
+    border-top: 0;
+    /* transform: skew(-25deg,0); */
+	transition:all 0.2s ease-in;
+	-webkit-transition:all 0.2s ease-in;
+	-moz-transition:all 0.2s ease-in;
+	-o-transition:all 0.2s ease-in;
+	-ms-transition:all 0.2s ease-in;
+	 margin: 5px 0 5px 10px;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Tabs style
+/*--------------------------------------------------------------*/
+
+.mb2moduleintabs-tabs {
+	position: relative;	
+}
+
+/* Tabs list */
+.mb2moduleintabs-tabs-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;		
+}
+
+
+.mb2moduleintabs-tabs-list li {
+	margin: 0 2px 0 0;
+	padding: 0;
+	display: block;
+	float: left;	
+}
+
+
+/* Tabs tsyle - normal state */
+
+.mb2moduleintabs-tabs-list li a {
+	display: block;
+    padding: 4px 10px;
+    background-color:#efefef;
+    color: #6c6c6c;
+    text-decoration: none;
+    /* font-weight: bold; */
+    font-size: 12px;
+    text-transform: uppercase;
+	    
+}
+
+
+/* Tabs tsyle - active state */
+
+.mb2moduleintabs-tabs-list li a.active, .mb2moduleintabs-tabs-list li a:hover{
+	background-color: #C6D941;
+    color: #fff;
+	transition:all 0.2s ease-in-out;
+}
+
+
+
+
+
+/* Tabs content */
+
+.mb2moduleintabs-tabs-content {
+	padding: 10px;
+    /* background-color: #fafbfc; */
+    /* border: solid 1px #ddd; */
+}
+
+
+
+
+
+
+/* Tabs top position */
+
+.mb2moduleintabs-tabs.tabs-top .mb2moduleintabs-tabs-list {
+	border-bottom: solid 2px #C6D941;
+    transform: skew(-10deg,0);
+	margin-left: 2px;
+}
+
+
+
+.mb2moduleintabs-tabs.tabs-top .mb2moduleintabs-tabs-content {
+	border-top: 0;
+}
+
+
+
+
+
+/* Tabs bottom position */
+
+.mb2moduleintabs-tabs.tabs-bottom .mb2moduleintabs-tabs-list {
+	border-top: solid 2px #18649f;
+}
+
+
+
+.mb2moduleintabs-tabs.tabs-bottom .mb2moduleintabs-tabs-content {
+	border-bottom: 0;
+}
+
+
+
+
+/* Tabs left and right position */
+
+.mb2moduleintabs-tabs.tabs-left .mb2moduleintabs-tabs-list,
+.mb2moduleintabs-tabs.tabs-right .mb2moduleintabs-tabs-list {
+	position: absolute;
+	top: 0;	
+	width: 180px;
+	height: 100%;	
+}
+
+
+.mb2moduleintabs-tabs.tabs-left .mb2moduleintabs-tabs-list li,
+.mb2moduleintabs-tabs.tabs-right .mb2moduleintabs-tabs-list li {
+	float: none;
+	margin: 0 0 2px 0;	
+}
+
+
+
+
+/* Tabs left position */
+
+.mb2moduleintabs-tabs.tabs-left .mb2moduleintabs-tabs-list {
+	left: 0;
+	border-right: solid 2px #18649f;
+}
+
+
+
+.mb2moduleintabs-tabs.tabs-left .mb2moduleintabs-tabs-list li a {
+	text-align: right;	
+}
+
+
+
+.mb2moduleintabs-tabs.tabs-left .mb2moduleintabs-tabs-content {
+	margin-left: 180px;	
+}
+
+
+
+
+/* Tabs right position */
+
+.mb2moduleintabs-tabs.tabs-right .mb2moduleintabs-tabs-list {
+	right: 0;
+	border-left: solid 2px #18649f;
+}
+
+
+
+.mb2moduleintabs-tabs.tabs-right .mb2moduleintabs-tabs-content {
+	margin-right: 180px;	
+}
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Additional style 
+/*--------------------------------------------------------------*/
+
+.mb2moduleintabs-clr {
+	*zoom: 1;
+}
+.mb2moduleintabs-clr:before,
+.mb2moduleintabs-clr:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.mb2moduleintabs-clr:after {
+	clear: both;
+}
+
+
+
+.mb2moduleintabs a:focus {
+	outline: none;	
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+/*	Resposive style
+/*--------------------------------------------------------------*/	
+@media only screen and (max-width:568px){
+	
+	
+	/* Resposive tabs style */
+	
+	.mb2moduleintabs-tabs.tabs-top .mb2moduleintabs-tabs-list,
+	.mb2moduleintabs-tabs.tabs-bottom .mb2moduleintabs-tabs-list,
+	.mb2moduleintabs-tabs.tabs-left .mb2moduleintabs-tabs-list,
+	.mb2moduleintabs-tabs.tabs-right .mb2moduleintabs-tabs-list {
+		border: 0;
+		position: static;
+		width: 100% !important;	/* Add important beacuse use may use custom width of left or right tabs */
+	}
+	
+	
+	.mb2moduleintabs-tabs.tabs-top .mb2moduleintabs-tabs-list li,
+	.mb2moduleintabs-tabs.tabs-bottom .mb2moduleintabs-tabs-list li,
+	.mb2moduleintabs-tabs.tabs-left .mb2moduleintabs-tabs-list li,
+	.mb2moduleintabs-tabs.tabs-right .mb2moduleintabs-tabs-list li{
+		width: 100%;
+		margin: 0 0 2px 0;
+		display: block;
+		float: none;			
+	}
+	
+	
+	.mb2moduleintabs-tabs.tabs-top .mb2moduleintabs-tabs-list li a,
+	.mb2moduleintabs-tabs.tabs-bottom .mb2moduleintabs-tabs-list li a,
+	.mb2moduleintabs-tabs.tabs-left .mb2moduleintabs-tabs-list li a,
+	.mb2moduleintabs-tabs.tabs-right .mb2moduleintabs-tabs-list li a {
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		-ms-border-radius: 0;
+		-o-border-radius: 0;
+		border-radius: 0;
+		text-align: center;		
+	}
+	
+	
+	.mb2moduleintabs-tabs.tabs-top .mb2moduleintabs-tabs-content,
+	.mb2moduleintabs-tabs.tabs-bottom .mb2moduleintabs-tabs-content,
+	.mb2moduleintabs-tabs.tabs-left .mb2moduleintabs-tabs-content,
+	.mb2moduleintabs-tabs.tabs-right .mb2moduleintabs-tabs-content {
+		border: solid 1px #ddd;	
+		margin: 0 !important; /* Add important beacuse use may use custom margin left or right for tabs content div */
+	}
+	
+	
+	
+	
+	
+	/* Resposive accordion style */
+	
+	.mb2moduleintabs-panel-group .mb2moduleintabs-panel-heading {
+		text-align: center;	
+	}
+	
+		
+	
+	
+}
+
+
+
+/* add style */
+
+
+.moduletable h3 {
+    text-align: left;
+    color: #c6d941;
+    border-bottom: 1px #e2e2e2 solid;
+    display: block;
+    margin-right: auto;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+	font-size:20px;
+}
+
+.moduletable h3:before {
+    position: relative;
+    bottom: -26px;
+    left: 60px;
+    width: 35px;
+    height: 5px;
+    content: "";
+    display: inline-block;
+    background-color: #c6d941;
+}
+
+.moduletable h3:after {
+    position: relative;
+    bottom: -24px;
+    left: -127px;
+    width: 80px;
+    height: 1px;
+    content: "";
+    display: inline-block;
+    background-color: #c6d941;
+}

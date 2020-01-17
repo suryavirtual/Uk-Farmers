@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<form>
+	<fields
+		name="params">
+		<fieldset 
+			name="extrafields">	
+			<field 
+				name="ptype"
+				type="list"
+				label="JAI_POINT_TYPE"
+				description="JAI_POINT_TYPE_DESC">
+                <option value="default">Default</option>
+                <option value="cloud">Cloud</option>
+                <option value="star">Star</option>
+                <option value="study">Study</option>
+                <option value="truck">Truck</option>
+				 <option value="default_orange">Default orange</option>
+                <option value="cloud_orange">Cloud orange</option>
+                <option value="star_orange">Star orange</option>
+                <option value="study_orange">Study orange</option>
+                <option value="truck_orange">Truck orange</option>
+				 <option value="default_red">Default red</option>
+                <option value="cloud_red">Cloud red</option>
+                <option value="star_red">Star red</option>
+                <option value="study_red">Study red</option>
+                <option value="truck_red">Truck red</option>
+            </field>
+			<field
+				name="title"
+				type="text"
+				label="JAI_TITLES"
+				description="JAI_TITLES_DESC" />
+			<field
+				name="link"
+				type="text"
+				label="JAI_LINK"
+				description="JAI_LINK_DESC" />
+			<field 
+				name="offsetx"
+				type="text"
+				default="50"
+				label="JAI_OFFSET_X" 
+				description="JAI_OFFSET_X_DESC" />
+			<field 
+				name="offsety"
+				type="text"
+				label="JAI_OFFSET_Y"
+				default="50"
+				description="JAI_OFFSET_Y_DESC" />
+			<field 
+				name="details"
+				type="textarea"
+				label="JAI_DETAILS"
+                filter="raw"
+				description="JAI_DETAILS_DESC" />
+								
+			<field 
+				name="classpoint"
+				type="text"
+				default=""
+				label="JAI_CLASSPOINT"
+				description="JAI_CLASSPOINT_DESC" />
+				
+			<field
+				name="bgcolor"
+				type="color"
+				default="#ffffff"
+				label="JAI_BGCOLOR"
+				description="JAI_BGCOLOR_DESC"/>
+			
+		</fieldset>
+	</fields>
+</form>		

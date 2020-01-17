@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_mb2portfolio</name>
+    <author>Mariusz Boloz</author>
+	<creationDate>April 2013</creationDate>
+	<copyright>Copyright (C) 2013 Mariusz Boloz (http://marbol2.com) All rights reserved.</copyright>
+	<license>GNU/GPL (http://www.gnu.org/copyleft/gpl.html)</license>
+	<authorEmail>mariuszboloz@gmail.com</authorEmail>
+	<authorUrl>www.marbol2.com</authorUrl>
+    <version>2.3.1</version>
+    <description>Simple Joomla Portfolio Component.</description>
+    	
+    <install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update; New in 1.6 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates</schemapath>
+		</schemas>
+	</update>
+	
+	<!-- Media files -->
+	<media destination="com_mb2portfolio" folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+	
+	<!-- Frontend files and folders -->
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>mb2portfolio.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+		<folder>libs</folder>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+	
+	<!-- Frontend language -->
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB.com_mb2portfolio.ini
+        </language>
+    </languages>
+	
+	
+	
+    <administration>
+	
+		<!-- Backend menu -->
+        <menu img="" >COM_MB2PORTFOLIO</menu>
+        <submenu>            
+			<menu link="option=com_mb2portfolio&amp;view=projects" view="projects" img="" alt="Mb2portfolio/Projects">COM_MB2PORTFOLIO_TITLE_PROJECTS</menu>
+			<menu link="option=com_mb2portfolio&amp;view=skills" view="skills" img="" alt="Mb2portfolio/Skills">COM_MB2PORTFOLIO_TITLE_SKILLS</menu>
+			<menu link="option=com_mb2portfolio&amp;view=extrafields" view="extrafields" img="" alt="Mb2portfolio/Extra Fields">COM_MB2PORTFOLIO_TITLE_EXTRA_FIELDS</menu>
+        </submenu>		
+		
+		<!-- Backend files and folders -->
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>mb2portfolio.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+			<folder>libs</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+		
+		<!-- Backend language -->
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB.com_mb2portfolio.ini
+            </language>
+            <language tag="en-GB">language/en-GB.com_mb2portfolio.sys.ini
+            </language>
+        </languages>
+		
+    </administration>
+</extension>
